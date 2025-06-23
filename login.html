@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVOX3 | Acesse sua Conta</title>
+    <meta name="description" content="Acesse sua conta INVOX3 para gerenciar suas campanhas ou seu perfil de criador.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="cadastro-background"> <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">INVOX<span>3</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="criadores.html">Criadores</a></li>
+                    <li><a href="para-marcas.html">Para Marcas</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#como-funciona-secao">Como Funciona</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline active">Entrar</a>
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="cadastro-page"> <div class="cadastro-container"> <div class="cadastro-coluna-esquerda">
+                <div class="institucional-content">
+                    <h1>Conectamos criadores e marcas que fazem sentido juntos.</h1>
+                    <p>Junte-se à revolução do marketing de influência.</p>
+                </div>
+            </div>
+
+            <div class="cadastro-coluna-direita">
+                <div class="form-container"> 
+                    <h2>Acesse sua conta</h2>
+                    <p class="form-subtitulo">Que bom te ver por aqui!</p>
+
+                    <form id="formLogin" action="#" method="POST">  <div class="form-group">
+                            <label for="emailLogin">E-mail</label>
+                            <input type="email" id="emailLogin" name="emailLogin" required placeholder="seuemail@exemplo.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senhaLogin">Senha</label>
+                            <input type="password" id="senhaLogin" name="senhaLogin" required placeholder="Sua senha">
+                            <a href="esqueci-senha.html" class="link-esqueci-senha">Esqueceu sua senha?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit-cadastro">Entrar</button> <div class="social-signup-divider">
+                            <span>OU</span>
+                        </div>
+
+                        <button type="button" class="btn btn-google">
+                            <i class="fab fa-google"></i> Entrar com Google
+                        </button>
+                        
+                        <p class="login-link">
+                            Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>INVOX3</h3>
+                    <p>Conectando marcas e criadores de conteúdo de forma autêntica e transparente.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="criadores.html" class="active">Criadores</a></li>
+                        <li><a href="para-marcas.html">Para Marcas</a></li>
+                        <li><a href="index.html#como-funciona-secao">Como Funciona</a></li>
+                        <li><a href="radar.html" class="active">Radar INVOX</a></li> </ul>
+            </nav>
+
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                        <li><a href="privacidade.html">Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="mailto:contato@invox3.com">contato@invox3.com</a></li>
+                        <li><a href="tel:+5531991915383">+55 (31) 99191-5383</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 INVOX3. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Se houver scripts globais do header que dependam do DOM, eles seriam inicializados aqui
+            // ou em um arquivo JS global linkado.
+            // Para a página de login, não temos scripts específicos complexos além da validação de formulário
+            // que seria um passo futuro.
+        });
+    </script>
+</body>
+</html>

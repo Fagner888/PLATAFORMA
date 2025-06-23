@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVOX3 | Dashboard da Marca</title>
+    <meta name="description" content="Gerencie suas campanhas, propostas e encontre criadores na INVOX3.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> </head>
+<body class="dashboard-page"> <header class="dashboard-header brand-dashboard-header"> <div class="container header-content" style="justify-content: flex-start; gap: var(--spacing-xl);"> <a href="index.html" class="logo">INVOX<span>3</span></a>
+            
+           <nav class="brand-dashboard-main-nav">
+                 <ul>
+                <li><a href="#dashboard-marca-inicio" data-section="dashboard-marca-inicio"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#dashboard-marca-propostas" data-section="dashboard-marca-propostas"><i class="fas fa-envelope-open-text"></i> Propostas</a></li>
+                <li><a href="#dashboard-marca-campanhas" data-section="dashboard-marca-campanhas"><i class="fas fa-bullhorn"></i> Campanhas</a></li>
+                <li><a href="#dashboard-marca-relatorios" data-section="dashboard-marca-relatorios"><i class="fas fa-chart-pie"></i> Relatórios</a></li>
+                <li><a href="#dashboard-marca-buscar-criadores" data-section="dashboard-marca-buscar-criadores"><i class="fas fa-search"></i> Buscar Criadores</a></li>
+                <li><a href="#dashboard-marca-favoritos" data-section="dashboard-marca-favoritos"><i class="fas fa-star"></i> Favoritos</a></li>
+                <li><a href="#dashboard-marca-notificacoes" data-section="dashboard-marca-notificacoes"><i class="fas fa-bell"></i> Notificações</a></li>
+                <li><a href="#dashboard-marca-perfil" data-section="dashboard-marca-perfil"><i class="fas fa-user-cog"></i> Perfil & Config.</a></li> </ul>
+                   </nav>
+                     </div>
+                       </header>
+
+    <main class="dashboard-content" style="margin-top: 60px;"> <section id="dashboard-marca-inicio" class="dashboard-section active-dashboard-section">
+            
+            <div class="widget-card brand-summary-card"> <div class="brand-summary-header">
+                    <img src="https://via.placeholder.com/60x60/cccccc/1E1E1E?text=LogoMarca" alt="Logo da Marca" class="brand-summary-logo">
+                    <div>
+                        <h2 class="brand-summary-name">[Nome da Marca]</h2>
+                        <p class="brand-summary-meta">
+                            Status: <span class="status-tag status-verified"><i class="fas fa-check-circle"></i> Verificada</span> | 
+                            Plano: <span class="plan-tag plan-premium">Premium</span>
+                        </p>
+                    </div>
+                </div>
+                <hr class="widget-divider">
+                <p class="brand-summary-last-access">Último acesso: 03/07/2025</p>
+                
+                <ul class="brand-summary-stats">
+                    <li>
+    <span class="stat-label-group"><i class="fas fa-bullhorn"></i> Campanhas ativas:</span>
+    <strong class="stat-value">3</strong>
+    <a href="#dashboard-marca-campanhas" data-section-link="dashboard-marca-campanhas" class="link-subtle">Ver <i class="fas fa-arrow-right fa-xs"></i></a>
+</li>
+                    <li><i class="fas fa-envelope"></i> Propostas aguardando resposta: <strong>2</strong> <a href="#dashboard-marca-propostas" data-section-link="dashboard-marca-propostas" class="link-subtle">Ver <i class="fas fa-arrow-right fa-xs"></i></a></li>
+                    <li><i class="fas fa-star"></i> Criadores favoritados: <strong>8</strong> <a href="#dashboard-marca-favoritos" data-section-link="dashboard-marca-favoritos" class="link-subtle">Ver <i class="fas fa-arrow-right fa-xs"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="widget-card" style="margin-top: var(--spacing-xl);">
+                 <h3><i class="fas fa-search"></i> Acesso Rápido: Buscar Criadores</h3>
+                 <p>Encontre o talento ideal para sua próxima campanha.</p>
+                 <a href="#dashboard-marca-buscar-criadores" data-section-link="dashboard-marca-buscar-criadores" class="btn btn-primary" style="margin-top:var(--spacing-sm);">Iniciar Busca Avançada</a>
+            </div>
+
+
+        </section>
+
+        <section id="dashboard-marca-propostas" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <h1><i class="fas fa-paper-plane"></i> Minhas Propostas Enviadas</h1>
+                <p>Acompanhe o status de todas as propostas que você enviou para os criadores.</p>
+            </div>
+
+            <div class="dashboard-subsection" id="lista-propostas-enviadas">
+                <div class="dashboard-subsection-header">
+                    <h2><i class="fas fa-list-ul"></i> Histórico de Envios</h2>
+                    <div class="subsection-actions">
+                        <select id="filterPropostasEnviadasStatus" name="filterPropostasEnviadasStatus" class="form-control form-control-sm" style="max-width: 180px;">
+                            <option value="">Filtrar por Status</option>
+                            <option value="aguardando">Aguardando Resposta</option>
+                            <option value="visualizada">Visualizada</option>
+                            <option value="respondida">Respondida</option>
+                            <option value="aceita">Aceita</option>
+                            <option value="rejeitada">Rejeitada</option>
+                        </select>
+                        <a href="#dashboard-marca-buscar-criadores" data-section-link="dashboard-marca-buscar-criadores" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Criar Nova Proposta</a>
+                    </div>
+                </div>
+
+                <div class="proposals-sent-list item-list-cards"> <div class="proposal-sent-item card-list-item status-aguardando">
+                        <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/B4299A/fff?text=LF" alt="Avatar Luana Fashion" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Proposta para: <strong>Luana Fashion (@luanafashion)</strong></h4>
+                                <p class="item-subtitle">Referente à Campanha: <strong>Campanha Inverno 2025</strong></p>
+                                <p class="item-meta">Enviada em: 01/06/2025 | Valor Ofertado: <strong class="price-tag">R$ 2.500,00</strong></p>
+                            </div>
+                        </div>
+                        <div class="item-status-actions">
+                            <span class="status-tag status-aguardando">Aguardando Resposta</span>
+                            <div class="item-actions">
+                                <a href="#" class="btn btn-sm btn-outline">Ver Proposta</a>
+                                <a href="#" class="btn btn-sm btn-outline-secondary" title="Editar ou Retirar Proposta">Editar/Retirar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="proposal-sent-item card-list-item status-visualizada">
+                        <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/3498DB/fff?text=JV" alt="Avatar João Vlogs" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Proposta para: <strong>João Vlogs (@joaovlogs)</strong></h4>
+                                <p class="item-subtitle">Referente à Campanha: <strong>Campanha Verão 2025</strong></p>
+                                <p class="item-meta">Enviada em: 30/05/2025 | Valor Ofertado: <strong class="price-tag">R$ 1.800,00</strong></p>
+                            </div>
+                        </div>
+                        <div class="item-status-actions">
+                            <span class="status-tag status-visualizada"><i class="fas fa-eye fa-xs"></i> Visualizada</span>
+                            <div class="item-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Ver Chat</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="proposal-sent-item card-list-item status-aceita">
+                         <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/ABFF4F/1E1E1E?text=MF" alt="Avatar Marcela Fit" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Proposta para: <strong>Marcela Fit (@marcela.fit)</strong></h4>
+                                <p class="item-subtitle">Referente à Campanha: <strong>Fitness Campanha Julho</strong></p>
+                                <p class="item-meta">Enviada em: 28/05/2025 | Valor Ofertado: <strong class="price-tag">R$ 3.000,00</strong></p>
+                            </div>
+                        </div>
+                        <div class="item-status-actions">
+                            <span class="status-tag status-aceita"><i class="fas fa-check-circle"></i> Aceita!</span>
+                            <div class="item-actions">
+                                <a href="#dashboard-marca-campanhas" data-section-link="dashboard-marca-campanhas" class="btn btn-sm btn-success">Gerenciar Campanha</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+            </div>
+        </section>
+
+        <section id="dashboard-marca-campanhas" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <h1><i class="fas fa-bullhorn"></i> Minhas Campanhas</h1>
+                <p>Crie e gerencie todas as suas campanhas de marketing de influência em um só lugar.</p>
+                <div class="subsection-actions" style="margin-top: var(--spacing-sm);">
+                    <button type="button" class="btn btn-primary" id="btnCriarNovaCampanha"><i class="fas fa-plus"></i> Criar Nova Campanha</button>
+                </div>
+            </div>
+
+            <div class="dashboard-subsection" id="lista-campanhas">
+                <div class="dashboard-subsection-header">
+                    <h2><i class="fas fa-list-ul"></i> Todas as Campanhas</h2>
+                    <div class="subsection-actions">
+                        <select id="filterMinhasCampanhasStatus" name="filterMinhasCampanhasStatus" class="form-control form-control-sm" style="max-width: 180px;">
+                            <option value="">Filtrar por Status</option>
+                            <option value="em-andamento">Em Andamento</option>
+                            <option value="concluida">Concluída</option>
+                            <option value="rascunho">Rascunho</option>
+                            <option value="arquivada">Arquivada</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campaign-list-brand item-list-cards"> <div class="campaign-list-item card-list-item">
+                        <div class="campaign-item-header">
+                            <h4 class="item-title">Lançamento App XYZ</h4>
+                            <span class="status-tag status-inprogress">Em Andamento</span>
+                        </div>
+                        <div class="campaign-item-body">
+                            <div class="campaign-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Criadores Participantes:</span>
+                                    <div class="stat-value creator-avatars">
+                                        <img src="https://via.placeholder.com/30x30/111/fff?text=T" alt="Avatar do Criador TechGeek" title="@techgeek">
+                                        <img src="https://via.placeholder.com/30x30/222/fff?text=A" alt="Avatar do Criador AndroidGirl" title="@androidgirl">
+                                        <img src="https://via.placeholder.com/30x30/333/fff?text=J" alt="Avatar do Criador JoaoVlogs" title="@joaovlogs">
+                                        <span class="avatar-more" title="e mais 2 criadores">+2</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Prazo Final</span>
+                                    <span class="stat-value">30/07/2025</span>
+                                </div>
+                            </div>
+                            <p class="campaign-item-summary"><strong>Próxima Ação:</strong> 3 de 5 criadores já enviaram o conteúdo para sua aprovação.</p>
+                        </div>
+                        <div class="item-actions campaign-list-item-actions">
+                           <a href="#dashboard-marca-gerenciar-campanha" 
+                               data-section-link="dashboard-marca-gerenciar-campanha" 
+                               class="btn btn-sm btn-primary">Gerenciar Campanha</a>
+                        </div>
+                    </div>
+
+                    <div class="campaign-list-item card-list-item">
+                        <div class="campaign-item-header">
+                            <h4 class="item-title">Campanha Inverno 2025</h4>
+                            <span class="status-tag status-completed">Concluída</span>
+                        </div>
+                        <div class="campaign-item-body">
+                             <div class="campaign-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Criador Participante:</span>
+                                    <div class="stat-value creator-avatars">
+                                        <img src="https://via.placeholder.com/30x30/B4299A/fff?text=L" alt="Avatar do Criador Luana Fashion" title="@luanafashion">
+                                    </div>
+                                </div>
+                                 <div class="stat-item">
+                                    <span class="stat-label">Concluída em</span>
+                                    <span class="stat-value">15/05/2025</span>
+                                </div>
+                            </div>
+                            <p class="campaign-item-summary"><strong>Resultados Finais:</strong> Alcance total de <strong>315K</strong> com engajamento médio de <strong>4.2%</strong>.</p>
+                        </div>
+                         <div class="item-actions campaign-list-item-actions">
+                            <a href="#" class="btn btn-sm btn-outline">Ver Relatório Final</a>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">Arquivar</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="dashboard-marca-buscar-criadores" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <h1><i class="fas fa-search"></i> Buscar Criadores</h1>
+                <p>Utilize os filtros para encontrar o influenciador com o perfil perfeito para sua marca.</p>
+            </div>
+
+            <div class="creators-content-wrapper"> <aside class="filters-sidebar">
+                    <h2><i class="fas fa-filter"></i> Filtros Avançados</h2>
+                    <form id="formFiltrosMarcaDashboard" action="#" method="GET">
+                        <div class="form-group">
+                            <label for="filtroNomeCriadorMarca">Buscar por Nome</label>
+                            <input type="text" id="filtroNomeCriadorMarca" name="nomeCriador" class="form-control" placeholder="Nome ou @ do criador">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filtroNichoMarca">Nicho de Atuação</label>
+                            <select id="filtroNichoMarca" name="nicho" class="form-control">
+                                <option value="">Todos os nichos</option>
+                                <option value="arte_fotografia">Arte e Fotografia</option>
+                                <option value="automotivo">Automotivo</option>
+                                <option value="beleza">Beleza</option>
+                                <option value="casa_decoracao">Casa e Decoração</option>
+                                <option value="educacao">Educação</option>
+                                <option value="esportes">Esportes</option>
+                                <option value="familia_maternidade">Família e Maternidade</option>
+                                <option value="financas_investimentos">Finanças e Investimentos</option>
+                                <option value="fitness">Fitness</option>
+                                <option value="games_streaming">Games e Streaming</option>
+                                <option value="gastronomia">Gastronomia</option>
+                                <option value="humor_comedia">Humor e Comédia</option>
+                                <option value="livros_leitura">Livros e Leitura</option>
+                                <option value="moda_lifestyle">Moda e Lifestyle</option>
+                                <option value="musica_danca">Música e Dança</option>
+                                <option value="negocios_empreendedorismo">Negócios e Empreendedorismo</option>
+                                <option value="pets">Pets</option>
+                                <option value="saude_bemestar">Saúde e Bem-estar</option>
+                                <option value="sustentabilidade_eco">Sustentabilidade e Eco</option>
+                                <option value="tecnologia">Tecnologia</option>
+                                <option value="viagem">Viagem</option>
+                                <option value="outros">Outros</option>
+                                </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Plataforma Principal</label>
+                            <div class="checkbox-group-vertical">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="filtroInstaMarca" name="plataforma[]" value="instagram" checked>
+                                    <label for="filtroInstaMarca">Instagram</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="filtroTikTokMarca" name="plataforma[]" value="tiktok">
+                                    <label for="filtroTikTokMarca">TikTok</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="filtroYouTubeMarca" name="plataforma[]" value="youtube">
+                                    <label for="filtroYouTubeMarca">YouTube</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filtroEstadoMarca">Estado</label>
+                            <select id="filtroEstadoMarca" name="estado" class="form-control">
+                                 <option value="">Todos os estados</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filtroSeguidoresMarca" class="has-slider-value">Nº de Seguidores: <span id="filtroSeguidoresMarcaValor">50K+</span></label>
+                            <input type="range" id="filtroSeguidoresMarca" name="seguidores_min" min="1000" max="5000000" step="1000" value="50000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filtroEngajamentoMarca" class="has-slider-value">Taxa de Engajamento Mín.: <span id="filtroEngajamentoMarcaValor">2%</span></label>
+                            <input type="range" id="filtroEngajamentoMarca" name="engajamento_min" min="0" max="20" step="0.1" value="2">
+                        </div>
+
+                        <div class="filter-actions">
+                            <button type="submit" class="btn btn-primary btn-aplicar-filtros">Buscar Criadores</button>
+                            <button type="reset" class="btn btn-outline btn-limpar-filtros">Limpar Filtros</button>
+                        </div>
+                    </form>
+                </aside>
+
+                <section class="results-section">
+                    <div class="results-header">
+                        <p><span id="numeroResultadosMarca">128</span> criadores encontrados</p>
+                        <div class="sort-options">
+                            <label for="ordenarPorMarca">Ordenar por:</label>
+                            <select id="ordenarPorMarca" name="ordenarPor" class="form-control form-control-sm">
+                                <option value="relevancia">Relevância</option>
+                                <option value="mais_seguidores">Mais Seguidores</option>
+                                <option value="maior_engajamento">Maior Engajamento</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="creators-grid">
+                        <div class="creator-card">
+                            <div class="creator-image">
+                                <img src="https://via.placeholder.com/280x280/ABFF4F/1E1E1E?text=Criador+1" alt="João Creator">
+                                <div class="creator-category">Tecnologia</div>
+                            </div>
+                            <div class="creator-info">
+                                <h3 class="creator-name">João Creator</h3>
+                                <p class="creator-location"><i class="fas fa-map-marker-alt"></i> Curitiba, PR</p>
+                                <div class="creator-stats">
+                                    <div class="creator-stat"><div class="creator-stat-value">82K</div><div class="creator-stat-label">Seguidores</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">3.5%</div><div class="creator-stat-label">Engajamento</div></div>
+                                </div>
+                                <div class="creator-actions brand-actions"> <a href="perfil-criador.html?id=1" target="_blank" class="btn btn-sm btn-primary">Ver Perfil</a>
+                                    <button type="button" class="btn btn-sm btn-outline btn-favorite" title="Salvar como Favorito"><i class="far fa-star"></i></button>
+                                    <button type="button" class="btn btn-sm btn-outline btn-propose" title="Enviar Proposta"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="creator-card">
+                           <div class="creator-image">
+                                <img src="https://via.placeholder.com/280x280/B4299A/FFFFFF?text=Criadora+2" alt="Maria Influencer">
+                                <div class="creator-category">Beleza</div>
+                            </div>
+                            <div class="creator-info">
+                                <h3 class="creator-name">Maria Influencer</h3>
+                                <p class="creator-location"><i class="fas fa-map-marker-alt"></i> Salvador, BA</p>
+                                <div class="creator-stats">
+                                    <div class="creator-stat"><div class="creator-stat-value">150K</div><div class="creator-stat-label">Seguidores</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">5.1%</div><div class="creator-stat-label">Engajamento</div></div>
+                                </div>
+                                <div class="creator-actions brand-actions">
+                                    <a href="perfil-criador.html?id=2" target="_blank" class="btn btn-sm btn-primary">Ver Perfil</a>
+                                    <button type="button" class="btn btn-sm btn-outline btn-favorite favorited" title="Remover dos Favoritos"><i class="fas fa-star"></i></button> <button type="button" class="btn btn-sm btn-outline btn-propose" title="Enviar Proposta"><i class="fas fa-paper-plane"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    <div class="pagination" style="justify-content: center; margin-top: var(--spacing-lg);">
+                        <p><em>(Paginação dos resultados da busca aparecerá aqui)</em></p>
+                    </div>
+                </section>
+            </div>
+        </section>
+<section id="dashboard-marca-gerenciar-campanha" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <div style="flex-grow: 1;">
+                    <h1 style="font-size: 1.5rem; color: var(--text-medium); font-weight: 500;">Gerenciando Campanha:</h1>
+                    <p style="font-size: 1.8rem; color: var(--text-dark); font-weight: 700; margin:0;">Lançamento App XYZ</p>
+                </div>
+                <div class="subsection-actions">
+                    <a href="#dashboard-marca-campanhas" data-section-link="dashboard-marca-campanhas" class="btn btn-sm btn-outline"><i class="fas fa-arrow-left"></i> Voltar para Todas as Campanhas</a>
+                </div>
+            </div>
+
+            <div class="dashboard-subsection" id="acompanhamento-entregas">
+                <div class="dashboard-subsection-header">
+                    <h2><i class="fas fa-list-check"></i> Acompanhamento de Entregas dos Criadores</h2>
+                    </div>
+
+                <div class="deliverables-list item-list-cards">
+                    <div class="deliverable-item card-list-item status-aguardando-aprovacao">
+                        <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/111/fff?text=T" alt="Avatar do Criador" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Entrega de @techgeek</h4>
+                                <p class="item-subtitle">Tipo de Conteúdo: <strong>1x Vídeo para TikTok</strong></p>
+                                <p class="item-meta">Status: <span class="status-tag status-aguardando-aprovacao">Aguardando Aprovação</span></p>
+                            </div>
+                        </div>
+                        <div class="item-actions deliverable-actions">
+                            <button type="button" class="btn btn-sm btn-outline"><i class="fas fa-eye"></i> Ver Conteúdo</button>
+                            <button type="button" class="btn btn-sm btn-success"><i class="fas fa-check"></i> Aprovar</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fas fa-edit"></i> Solicitar Ajuste</button>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-item card-list-item status-metricas-pendentes">
+                        <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/222/fff?text=A" alt="Avatar do Criador" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Entrega de @androidgirl</h4>
+                                <p class="item-subtitle">Tipo de Conteúdo: <strong>3x Stories para Instagram</strong></p>
+                                <p class="item-meta">Status: <span class="status-tag status-metricas-pendentes">Aguardando Métricas</span></p>
+                            </div>
+                        </div>
+                        <div class="item-actions deliverable-actions">
+                            <button type="button" class="btn btn-sm btn-outline disabled-feature">Ver Conteúdo Publicado</button>
+                            <button type="button" class="btn btn-sm btn-primary">Lembrar Criador</button>
+                        </div>
+                    </div>
+                    
+                    <div class="deliverable-item card-list-item status-aprovado">
+                         <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/333/fff?text=J" alt="Avatar do Criador" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Entrega de @joaovlogs</h4>
+                                <p class="item-subtitle">Tipo de Conteúdo: <strong>1x Vídeo Longo YouTube</strong></p>
+                                <p class="item-meta">Status: <span class="status-tag status-aprovado">Conteúdo Aprovado</span></p>
+                            </div>
+                        </div>
+                        <div class="item-status-actions scheduled-info">
+                            <span><i class="far fa-calendar-alt"></i> Publicação em 15/06/2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+            </section>
+
+         <section id="dashboard-marca-favoritos" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <h1><i class="fas fa-star"></i> Meus Criadores Favoritos & Listas</h1>
+                <p>Organize os criadores que você mais gosta em listas para facilitar o planejamento de suas campanhas.</p>
+                <div class="subsection-actions" style="margin-top: var(--spacing-sm);">
+                    <button type="button" class="btn btn-primary" id="btnCriarNovaLista"><i class="fas fa-plus"></i> Criar Nova Lista</button>
+                </div>
+            </div>
+
+            <div class="dashboard-subsection" id="listas-personalizadas">
+                <div class="dashboard-subsection-header">
+                    <h2><i class="fas fa-folder-open"></i> Minhas Listas</h2>
+                    </div>
+
+                <div class="custom-lists-container">
+                    <div class="widget-card favorite-list-card">
+                        <div class="favorite-list-header">
+                            <h3 class="list-title"><i class="fas fa-folder"></i> Fitness Campanha Julho (<span class="creator-count">2</span>)</h3>
+                            <div class="list-actions">
+                                <button type="button" class="btn btn-xs btn-outline-secondary" title="Renomear Lista"><i class="fas fa-edit"></i></button>
+                                <button type="button" class="btn btn-xs btn-outline-danger" title="Excluir Lista"><i class="fas fa-trash"></i></button>
+                                <button type="button" class="btn btn-xs btn-primary" title="Enviar Proposta para esta Lista"><i class="fas fa-paper-plane"></i> Enviar Proposta para Lista</button>
+                            </div>
+                        </div>
+                        <div class="list-creators-grid">
+                            <div class="favorite-creator-card">
+                                <img src="https://via.placeholder.com/40x40/ABFF4F/1E1E1E?text=MF" alt="Avatar Marcela Fit" class="favorite-creator-avatar">
+                                <div class="favorite-creator-info">
+                                    <strong>Marcela Fit</strong>
+                                    <span>120K seguidores</span>
+                                </div>
+                                <div class="favorite-creator-actions">
+                                     <a href="perfil-criador.html?id=X" target="_blank" class="btn btn-xs btn-icon" title="Ver Perfil Completo"><i class="fas fa-external-link-alt"></i></a>
+                                     <button type="button" class="btn btn-xs btn-icon btn-danger-icon" title="Remover da lista"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <div class="favorite-creator-card">
+                                 <img src="https://via.placeholder.com/40x40/FF3D6C/1E1E1E?text=CV" alt="Avatar Coach Vinni" class="favorite-creator-avatar">
+                                <div class="favorite-creator-info">
+                                    <strong>Coach Vinni</strong>
+                                    <span>85K seguidores</span>
+                                </div>
+                                <div class="favorite-creator-actions">
+                                     <a href="perfil-criador.html?id=Y" target="_blank" class="btn btn-xs btn-icon" title="Ver Perfil Completo"><i class="fas fa-external-link-alt"></i></a>
+                                     <button type="button" class="btn btn-xs btn-icon btn-danger-icon" title="Remover da lista"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                             </div>
+                    </div>
+                    
+                    <div class="widget-card favorite-list-card">
+                         <div class="favorite-list-header">
+                            <h3 class="list-title"><i class="fas fa-folder"></i> Influencers Tech 2025 (<span class="creator-count">1</span>)</h3>
+                            <div class="list-actions">
+                                <button type="button" class="btn btn-xs btn-outline-secondary" title="Renomear Lista"><i class="fas fa-edit"></i></button>
+                                <button type="button" class="btn btn-xs btn-outline-danger" title="Excluir Lista"><i class="fas fa-trash"></i></button>
+                                <button type="button" class="btn btn-xs btn-primary" title="Enviar Proposta para esta Lista"><i class="fas fa-paper-plane"></i> Enviar Proposta para Lista</button>
+                            </div>
+                        </div>
+                        <div class="list-creators-grid">
+                            <div class="favorite-creator-card">
+                                <img src="https://via.placeholder.com/40x40/111/fff?text=T" alt="Avatar TechGeek" class="favorite-creator-avatar">
+                                <div class="favorite-creator-info">
+                                    <strong>TechGeek</strong>
+                                    <span>210K seguidores</span>
+                                </div>
+                                <div class="favorite-creator-actions">
+                                     <a href="perfil-criador.html?id=Z" target="_blank" class="btn btn-xs btn-icon" title="Ver Perfil Completo"><i class="fas fa-external-link-alt"></i></a>
+                                     <button type="button" class="btn btn-xs btn-icon btn-danger-icon" title="Remover da lista"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+            </div>
+        </section>
+
+        <section id="dashboard-marca-notificacoes" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <h1><i class="fas fa-bell"></i> Central de Notificações</h1>
+                <p>Acompanhe todas as suas atualizações e alertas importantes da plataforma INVOX3.</p>
+            </div>
+
+            <div class="widget-card notifications-center-widget"> <div class="notifications-center-header"> <button type="button" class="btn btn-sm btn-outline" id="markAllBrandNotificationsRead">
+                        <i class="fas fa-check-double"></i> Marcar todas como lidas
+                    </button>
+                    <select id="filterBrandNotificacoesTipo" name="filterBrandNotificacoesTipo" class="form-control form-control-sm" style="max-width: 200px; display:inline-block; vertical-align: middle;">
+                        <option value="">Filtrar por Tipo</option>
+                        <option value="proposta">Respostas de Propostas</option>
+                        <option value="mensagem">Novas Mensagens</option>
+                        <option value="campanha">Atualizações de Campanha</option>
+                        <option value="sistema">Avisos do Sistema</option>
+                    </select>
+                </div>
+
+                <ul class="notifications-center-list"> <li class="notification-item unread">
+                        <div class="notification-icon icon-proposal"> <i class="fas fa-reply"></i> </div>
+                        <div class="notification-details">
+                            <p class="notification-text">
+                                <strong>Resposta à Proposta:</strong> O criador "@luanafashion" enviou uma contraproposta para a "Campanha Inverno 2025".
+                                <a href="#dashboard-marca-propostas" data-section-link="dashboard-marca-propostas" class="notification-action-link">Ver negociação</a>
+                            </p>
+                            <span class="notification-time">15 minutos atrás</span>
+                        </div>
+                        <div class="notification-item-actions">
+                            <button type="button" class="btn btn-xs btn-icon" title="Marcar como lida"><i class="far fa-circle"></i></button>
+                        </div>
+                    </li>
+
+                    <li class="notification-item read">
+                        <div class="notification-icon icon-campaign"> <i class="fas fa-photo-video"></i>
+                        </div>
+                        <div class="notification-details">
+                            <p class="notification-text">
+                                <strong>Conteúdo para Aprovação:</strong> O criador "@techgeek" enviou o vídeo para a campanha "Lançamento App XYZ".
+                                <a href="#dashboard-marca-gerenciar-campanha" data-section-link="dashboard-marca-gerenciar-campanha" class="notification-action-link">Analisar conteúdo</a>
+                            </p>
+                            <span class="notification-time">3 horas atrás</span>
+                        </div>
+                        <div class="notification-item-actions">
+                            <button type="button" class="btn btn-xs btn-icon" title="Marcar como não lida"><i class="far fa-check-circle" style="color: var(--vibrant-lime-green);"></i></button>
+                        </div>
+                    </li>
+
+                    <li class="notification-item read">
+                        <div class="notification-icon icon-proposal" style="background-color: var(--vibrant-lime-green);">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="notification-details">
+                            <p class="notification-text">
+                                <strong>Proposta Aceita!</strong> A criadora "@marcela.fit" aceitou sua proposta para a "Fitness Campanha Julho".
+                                <a href="#dashboard-marca-campanhas" data-section-link="dashboard-marca-campanhas" class="notification-action-link">Iniciar campanha</a>
+                            </p>
+                            <span class="notification-time">Ontem</span>
+                        </div>
+                        <div class="notification-item-actions">
+                             <button type="button" class="btn btn-xs btn-icon" title="Marcar como não lida"><i class="far fa-check-circle" style="color: var(--vibrant-lime-green);"></i></button>
+                        </div>
+                    </li>
+                   
+                    </ul>
+                
+                <div class="pagination" style="justify-content: center; margin-top:var(--spacing-lg);">
+                    <p><em>(Paginação de notificações aparecerá aqui se necessário)</em></p>
+                </div>
+            </div>
+        </section>
+
+         <section id="dashboard-marca-perfil" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <h1><i class="fas fa-user-cog"></i> Perfil da Marca & Configurações</h1>
+                <p>Edite as informações da sua marca, dados de contato e preferências.</p>
+            </div>
+
+            <form id="formConfiguracoesMarca" action="#" method="POST" enctype="multipart/form-data">
+                
+                <div class="widget-card settings-card">
+                    <h3><i class="fas fa-building"></i> Informações Públicas da Marca</h3>
+                    <p class="settings-form-intro">Estas são as informações que os criadores verão ao encontrar sua marca na plataforma.</p>
+                    
+                    <div class="form-group">
+                        <label for="marcaNomeEmpresa">Nome da Empresa</label>
+                        <input type="text" id="marcaNomeEmpresa" name="nomeEmpresa" class="form-control" value="[Nome da Marca]">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Logo da Empresa</label>
+                        <div class="image-preview-container profile-avatar-preview" style="border-radius: 8px; width: 150px; height: 150px;"> <img src="https://via.placeholder.com/150x150/777/fff?text=Logo" alt="Logo da Marca" id="previewLogoMarca">
+                        </div>
+                        <div class="custom-file-upload">
+                            <input type="file" id="marcaLogoUpload" name="logoMarca" accept="image/*" class="inputfile">
+                            <label for="marcaLogoUpload" class="btn btn-outline btn-upload"><i class="fas fa-upload"></i> Alterar Logo</label>
+                            <span class="file-name" id="fileNameLogoMarca">Nenhum arquivo novo</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="marcaDescricao">Descrição Curta da Empresa (Slogan / Bio)</label>
+                        <textarea id="marcaDescricao" name="descricaoMarca" class="form-control" rows="4" placeholder="Descreva brevemente sua marca, seus valores e seu público-alvo.">[Descrição atual da marca...]</textarea>
+                    </div>
+
+                    <div class="metrics-form-grid"> <div class="form-group">
+                            <label for="marcaWebsite">Website</label>
+                            <input type="url" id="marcaWebsite" name="websiteMarca" class="form-control" placeholder="https://suamarca.com" value="https://...">
+                        </div>
+                         <div class="form-group">
+                            <label for="marcaSetor">Setor de Atuação</label>
+                            <select id="marcaSetor" name="setorMarca" class="form-control">
+                                <option value="">Selecione um setor</option>
+                                <option value="tecnologia" selected>Tecnologia</option>
+                                <option value="moda">Moda e Vestuário</option>
+                                <option value="beleza">Beleza e Cosméticos</option>
+                                <option value="alimentos">Alimentos e Bebidas</option>
+                                <option value="servicos">Serviços</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="widget-card settings-card" style="margin-top: var(--spacing-xl);">
+                    <h3><i class="fas fa-bell"></i> Preferências de Notificação</h3>
+                    <p class="settings-form-intro">Escolha quais notificações por e-mail você deseja receber:</p>
+                    <div class="checkbox-group-vertical settings-checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="marcaNotifNovaProposta" name="notifNovaProposta" checked>
+                            <label for="marcaNotifNovaProposta">Quando um criador responde à minha proposta</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="marcaNotifNovaMensagem" name="notifNovaMensagem" checked>
+                            <label for="marcaNotifNovaMensagem">Quando um criador envia uma nova mensagem direta</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="marcaNotifUpdateCampanha" name="notifUpdateCampanha" checked>
+                            <label for="marcaNotifUpdateCampanha">Sobre atualizações de conteúdo nas minhas campanhas ativas</label>
+                        </div>
+                         <div class="checkbox-item">
+                            <input type="checkbox" id="marcaNotifNovidades" name="notifNovidades" checked>
+                            <label for="marcaNotifNovidades">Sobre novidades e dicas da plataforma INVOX3</label>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="widget-card settings-card danger-zone-card" style="margin-top: var(--spacing-xl);">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Gerenciamento da Conta</h3>
+                     <div class="danger-zone-action">
+                        <h4 class="settings-subform-title" style="color: var(--danger-color);"><i class="fas fa-trash-alt"></i> Excluir Conta</h4>
+                        <p style="font-size:0.9rem; color:var(--text-medium); margin-bottom:var(--spacing-md);">Esta ação não pode ser desfeita. Isso removerá permanentemente o perfil da sua marca, campanhas e todos os dados associados.</p>
+                        <button type="button" class="btn btn-danger" id="btnExcluirContaMarca">Eu entendo, desejo excluir minha conta</button>
+                    </div>
+                </div>
+
+
+                <div class="form-actions" style="text-align: right; margin-top: var(--spacing-xl); padding: var(--spacing-lg); background-color:var(--bg-light); border-radius: 8px; box-shadow: var(--box-shadow); position: sticky; bottom: var(--spacing-lg); z-index: 998;">
+                    <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-save"></i> Salvar Todas as Alterações</button>
+                </div>
+            </form>
+        </section>
+
+<section id="dashboard-marca-gerenciar-campanha" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <div style="flex-grow: 1;">
+                    <h1 style="font-size: 1.5rem; color: var(--text-medium); font-weight: 500;">Gerenciando Campanha:</h1>
+                    <p style="font-size: 1.8rem; color: var(--text-dark); font-weight: 700; margin:0;">Lançamento App XYZ</p>
+                </div>
+                <div class="subsection-actions">
+                    <a href="#dashboard-marca-campanhas" data-section-link="dashboard-marca-campanhas" class="btn btn-sm btn-outline"><i class="fas fa-arrow-left"></i> Voltar para Todas as Campanhas</a>
+                </div>
+            </div>
+
+            <div class="dashboard-subsection" id="acompanhamento-entregas">
+                <div class="dashboard-subsection-header">
+                    <h2><i class="fas fa-list-check"></i> Acompanhamento de Entregas dos Criadores</h2>
+                    </div>
+
+                <div class="deliverables-list item-list-cards">
+                    <div class="deliverable-item card-list-item status-aguardando-aprovacao">
+                        <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/111/fff?text=T" alt="Avatar do Criador" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Entrega de @techgeek</h4>
+                                <p class="item-subtitle">Tipo de Conteúdo: <strong>1x Vídeo para TikTok</strong></p>
+                                <p class="item-meta">Status: <span class="status-tag status-aguardando-aprovacao">Aguardando Aprovação</span></p>
+                            </div>
+                        </div>
+                        <div class="item-actions deliverable-actions">
+                            <button type="button" class="btn btn-sm btn-outline"><i class="fas fa-eye"></i> Ver Conteúdo</button>
+                            <button type="button" class="btn btn-sm btn-success"><i class="fas fa-check"></i> Aprovar</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary"><i class="fas fa-edit"></i> Solicitar Ajuste</button>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-item card-list-item status-metricas-pendentes">
+                        <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/222/fff?text=A" alt="Avatar do Criador" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Entrega de @androidgirl</h4>
+                                <p class="item-subtitle">Tipo de Conteúdo: <strong>3x Stories para Instagram</strong></p>
+                                <p class="item-meta">Status: <span class="status-tag status-metricas-pendentes">Aguardando Métricas</span></p>
+                            </div>
+                        </div>
+                        <div class="item-actions deliverable-actions">
+                            <button type="button" class="btn btn-sm btn-outline disabled-feature">Ver Conteúdo Publicado</button>
+                            <button type="button" class="btn btn-sm btn-primary">Lembrar Criador</button>
+                        </div>
+                    </div>
+                    
+                    <div class="deliverable-item card-list-item status-aprovado">
+                         <div class="item-main-info">
+                            <img src="https://via.placeholder.com/50x50/333/fff?text=J" alt="Avatar do Criador" class="item-brand-logo" style="border-radius:50%;">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Entrega de @joaovlogs</h4>
+                                <p class="item-subtitle">Tipo de Conteúdo: <strong>1x Vídeo Longo YouTube</strong></p>
+                                <p class="item-meta">Status: <span class="status-tag status-aprovado">Conteúdo Aprovado</span></p>
+                            </div>
+                        </div>
+                        <div class="item-status-actions scheduled-info">
+                            <span><i class="far fa-calendar-alt"></i> Publicação em 15/06/2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+<section id="dashboard-marca-relatorios" class="dashboard-section" style="display:none;">
+            <div class="dashboard-section-header">
+                <h1><i class="fas fa-chart-pie"></i> Relatórios e Resultados</h1>
+                <p>Analise a performance de suas campanhas e meça o retorno sobre seu investimento.</p>
+            </div>
+
+            <div class="dashboard-subsection report-filters">
+                <div class="form-group">
+                    <label for="selectCampanhaRelatorio">Selecione uma Campanha Concluída para ver o Relatório:</label>
+                    <select id="selectCampanhaRelatorio" name="campanhaRelatorio" class="form-control">
+                        <option value="campanha_inverno_2025">Campanha Inverno 2025</option>
+                        <option value="campanha_verao_2025">Campanha Verão 2025</option>
+                        </select>
+                </div>
+            </div>
+
+            <div class="widget-card report-container" style="margin-top:var(--spacing-lg);">
+                <div class="report-header">
+                    <div class="report-title">
+                        <h2>Relatório da Campanha: Campanha Inverno 2025</h2> <span>Período: 01/04/2025 - 15/05/2025</span>
+                    </div>
+                    <div class="report-actions">
+                        <button type="button" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Exportar PDF</button>
+                    </div>
+                </div>
+
+                <hr class="widget-divider">
+
+                <div class="report-summary-metrics">
+                    <div class="summary-metric-item">
+                        <span class="metric-label">Alcance Total</span>
+                        <span class="metric-value">315K</span>
+                        <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 15% vs. Projeção</span>
+                    </div>
+                    <div class="summary-metric-item">
+                        <span class="metric-label">Engajamento Médio</span>
+                        <span class="metric-value">4.2%</span>
+                        <span class="metric-change positive"><i class="fas fa-arrow-up"></i> 0.2pp vs. Média</span>
+                    </div>
+                    <div class="summary-metric-item">
+                        <span class="metric-label">Custo por Mil (CPM)</span>
+                        <span class="metric-value">R$ 17,90</span>
+                        <span class="metric-change positive"><i class="fas fa-arrow-down"></i> -5% vs. Média (bom)</span>
+                    </div>
+                    <div class="summary-metric-item">
+                        <span class="metric-label">Cliques no Link</span>
+                        <span class="metric-value">12.380</span>
+                        <span class="metric-change">Custo/Clique: R$ 0,45</span>
+                    </div>
+                </div>
+
+                <div class="charts-grid" style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-xl);">
+                    <div class="chart-placeholder">
+                        <i class="fas fa-users"></i>
+                        <p>Alcance por Criador</p>
+                        <span>(Visualização em breve)</span>
+                    </div>
+                    <div class="chart-placeholder">
+                        <i class="fas fa-heart"></i>
+                        <p>Engajamento por Criador</p>
+                        <span>(Visualização em breve)</span>
+                    </div>
+                </div>
+                
+                <div class="creator-performance-details">
+                    <h3 class="settings-subform-title">Performance por Criador</h3>
+                    <div class="creator-performance-table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Criador</th>
+                                    <th>Alcance</th>
+                                    <th>Engajamento</th>
+                                    <th>Cliques</th>
+                                    <th>Conversões</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="table-creator-info">
+                                            <img src="https://via.placeholder.com/30x30/B4299A/fff?text=L" alt="Avatar Luana Fashion">
+                                            <span>Luana Fashion</span>
+                                        </div>
+                                    </td>
+                                    <td>180K</td>
+                                    <td>4.5%</td>
+                                    <td>7.120</td>
+                                    <td>152</td>
+                                </tr>
+                                <tr>
+                                     <td>
+                                        <div class="table-creator-info">
+                                            <img src="https://via.placeholder.com/30x30/ABC/fff?text=P" alt="Avatar Pedro Style">
+                                            <span>Pedro Style</span>
+                                        </div>
+                                    </td>
+                                    <td>135K</td>
+                                    <td>3.8%</td>
+                                    <td>5.260</td>
+                                    <td>98</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>        
+
+    </main>
+
+    <a href="#!" class="floating-cta" id="aiAssistantButtonMarca" style="background-color: var(--vibrant-purple-magenta); color: var(--text-on-vibrant-dark);">
+        <i class="fas fa-hands-helping"></i>
+        <span>Ajuda ou Suporte?</span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Lógica para navegação entre seções do Dashboard da Marca
+            const brandNavLinks = document.querySelectorAll('.brand-dashboard-main-nav ul li a[data-section], [data-section-link]');
+            const brandDashboardSections = document.querySelectorAll('.dashboard-content > .dashboard-section');
+            const mainBrandContentArea = document.querySelector('.dashboard-content');
+
+            function showBrandSection(targetSectionId, isInitialLoad = false) {
+                let sectionFound = false;
+                brandDashboardSections.forEach(section => {
+                    if (section.id === targetSectionId) {
+                        section.style.display = 'block';
+                        section.classList.add('active-dashboard-section');
+                        sectionFound = true;
+                    } else {
+                        section.style.display = 'none';
+                        section.classList.remove('active-dashboard-section');
+                    }
+                });
+
+                if (!sectionFound && !isInitialLoad) {
+                    document.getElementById('dashboard-marca-inicio').style.display = 'block';
+                     document.getElementById('dashboard-marca-inicio').classList.add('active-dashboard-section');
+                    targetSectionId = 'dashboard-marca-inicio';
+                }
+
+                document.querySelectorAll('.brand-dashboard-main-nav ul li a[data-section]').forEach(link => {
+                    if (link.getAttribute('data-section') === targetSectionId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+                
+                if (mainBrandContentArea && !isInitialLoad) {
+                    mainBrandContentArea.scrollTop = 0;
+                }
+
+                if (!isInitialLoad && history.pushState) {
+                     history.pushState({section: targetSectionId}, "", `#${targetSectionId}`);
+                }
+            }
+            
+            brandNavLinks.forEach(link => {
+                if (link.getAttribute('href') !== 'index.html' && link.getAttribute('href') !== '#!') {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        const targetSectionId = this.getAttribute('data-section') || this.getAttribute('data-section-link');
+                        if(targetSectionId) {
+                            showBrandSection(targetSectionId);
+                        }
+                    });
+                }
+            });
+            
+            let initialBrandSection = 'dashboard-marca-inicio';
+            if (window.location.hash) {
+                const hashSection = window.location.hash.substring(1);
+                if (document.getElementById(hashSection) && hashSection.startsWith('dashboard-marca-')) {
+                    initialBrandSection = hashSection;
+                }
+            }
+            showBrandSection(initialBrandSection, true);
+
+            window.onpopstate = function(event) {
+                let sectionId = 'dashboard-marca-inicio';
+                if (event.state && event.state.section) {
+                    sectionId = event.state.section;
+                } else if (window.location.hash) {
+                    const hashSection = window.location.hash.substring(1);
+                     if (document.getElementById(hashSection) && hashSection.startsWith('dashboard-marca-')) {
+                        sectionId = hashSection;
+                    }
+                }
+                showBrandSection(sectionId, true);
+            };
+        });
+    </script>
+</body>
+</html>

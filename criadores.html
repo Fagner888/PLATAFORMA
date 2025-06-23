@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVOX3 | Explore Criadores de Conteúdo</title>
+    <meta name="description" content="Encontre os melhores criadores de conteúdo para sua próxima campanha na INVOX3. Filtre por nicho, plataforma, localização e mais.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">INVOX<span>3</span></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="criadores.html" class="active">Criadores</a></li>
+                    <li><a href="para-marcas.html">Para Marcas</a></li>
+                    <li><a href="index.html#como-funciona-secao">Como Funciona</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Entrar</a>
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="creators-listing-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Descubra Quem Move Audiências</h1>
+                <p>Encontre talentos incríveis e conecte-se com o influenciador perfeito para sua marca.</p>
+            </div>
+
+            <div class="creators-content-wrapper">
+                <aside class="filters-sidebar">
+                    <h2><i class="fas fa-filter"></i> Filtrar Criadores</h2>
+                    <form id="formFiltrosCriadores" action="#" method="GET">
+                      <div class="form-group">
+                            <label for="filtroNomeCriador">Buscar por Nome</label>
+                            <input type="text" id="filtroNomeCriador" name="nomeCriador" placeholder="Nome ou @ do criador">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filtroNicho">Nicho</label>
+                            <select id="filtroNicho" name="nicho">
+                                <option value="">Todos os nichos</option>
+                                <option value="arte_fotografia">Arte e Fotografia</option>
+                                <option value="automotivo">Automotivo</option>
+                                <option value="beleza">Beleza</option>
+                                <option value="casa_decoracao">Casa e Decoração</option>
+                                <option value="educacao">Educação</option>
+                                <option value="esportes">Esportes</option>
+                                <option value="familia_maternidade">Família e Maternidade</option>
+                                <option value="financas_investimentos">Finanças e Investimentos</option>
+                                <option value="fitness">Fitness</option>
+                                <option value="games_streaming">Games e Streaming</option>
+                                <option value="gastronomia">Gastronomia</option>
+                                <option value="humor_comedia">Humor e Comédia</option>
+                                <option value="livros_leitura">Livros e Leitura</option>
+                                <option value="moda_lifestyle">Moda e Lifestyle</option>
+                                <option value="musica_danca">Música e Dança</option>
+                                <option value="negocios_empreendedorismo">Negócios e Empreendedorismo</option>
+                                <option value="pets">Pets</option>
+                                <option value="saude_bemestar">Saúde e Bem-estar</option>
+                                <option value="sustentabilidade_eco">Sustentabilidade e Eco</option>
+                                <option value="tecnologia">Tecnologia</option>
+                                <option value="viagem">Viagem</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Plataforma</label>
+                            <div class="checkbox-group-vertical">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="filtroInstagram" name="plataforma[]" value="instagram">
+                                    <label for="filtroInstagram">Instagram</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="filtroTikTok" name="plataforma[]" value="tiktok">
+                                    <label for="filtroTikTok">TikTok</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="filtroYouTube" name="plataforma[]" value="youtube">
+                                    <label for="filtroYouTube">YouTube</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="filtroEstado">Estado</label>
+                            <select id="filtroEstado" name="estado">
+                                <option value="">Todos os estados</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filtroCidade">Cidade</label>
+                            <input type="text" id="filtroCidade" name="cidade" placeholder="Digite a cidade">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filtroSeguidores" class="has-slider-value">Mín. Seguidores: <span id="filtroSeguidoresValor">0</span></label>
+                            <input type="range" id="filtroSeguidores" name="seguidores" min="0" max="1000000" step="10000" value="0">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filtroEngajamento" class="has-slider-value">Mín. Engajamento: <span id="filtroEngajamentoValor">0%</span></label>
+                            <input type="range" id="filtroEngajamento" name="engajamento" min="0" max="30" step="1" value="0">
+                        </div>
+
+                        <div class="filter-actions">
+                            <button type="submit" class="btn btn-primary btn-aplicar-filtros">Aplicar Filtros</button>
+                            <button type="reset" class="btn btn-outline btn-limpar-filtros">Limpar Filtros</button>
+                        </div>
+                    </form>
+                </aside>
+
+                <section class="results-section">
+                    <div class="results-header">
+                        <p><span id="numeroResultados">4</span> criadores encontrados</p>
+                        <div class="sort-options">
+                            <label for="ordenarPor">Ordenar por:</label>
+                            <select id="ordenarPor" name="ordenarPor">
+                                <option value="relevancia">Relevância</option>
+                                <option value="recentes">Mais Recentes</option>
+                                <option value="mais_seguidores">Mais Seguidores</option>
+                                <option value="maior_engajamento">Maior Engajamento</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="creators-grid" id="gridResultadosCriadores">
+                        <div class="creator-card">
+                            <div class="creator-image">
+                                <img src="https://images.pexels.com/photos/1642228/pexels-photo-1642228.jpeg" alt="Ana Silva">
+                                <div class="creator-category">Moda e Lifestyle</div>
+                            </div>
+                            <div class="creator-info">
+                                <h3 class="creator-name">Ana Silva</h3>
+                                <p class="creator-location"><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                                <div class="creator-stats">
+                                    <div class="creator-stat"><div class="creator-stat-value">125K</div><div class="creator-stat-label">Seguidores</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">4.8%</div><div class="creator-stat-label">Engajamento</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">4.9/5</div><div class="creator-stat-label">Avaliação</div></div>
+                                </div>
+                                <div class="creator-actions">
+                                    <a href="perfil-criador.html?id=1" class="btn btn-primary">Ver Perfil</a>
+                                    <a href="perfil-criador.html?id=1#contact-section" class="btn btn-outline">Contatar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="creator-card">
+                            <div class="creator-image">
+                                <img src="https://images.pexels.com/photos/936119/pexels-photo-936119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pedro Costa">
+                                <div class="creator-category">Tecnologia</div>
+                            </div>
+                            <div class="creator-info">
+                                <h3 class="creator-name">Pedro Costa</h3>
+                                <p class="creator-location"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
+                                <div class="creator-stats">
+                                    <div class="creator-stat"><div class="creator-stat-value">80K</div><div class="creator-stat-label">Seguidores</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">5.2%</div><div class="creator-stat-label">Engajamento</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">4.7/5</div><div class="creator-stat-label">Avaliação</div></div>
+                                </div>
+                                <div class="creator-actions">
+                                    <a href="perfil-criador.html?id=2" class="btn btn-primary">Ver Perfil</a>
+                                    <a href="perfil-criador.html?id=1#contact-section" class="btn btn-outline">Contatar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="creator-card">
+                            <div class="creator-image">
+                                <img src="https://images.pexels.com/photos/1852015/pexels-photo-1852015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Carla Mendes">
+                                <div class="creator-category">Gastronomia</div>
+                            </div>
+                            <div class="creator-info">
+                                <h3 class="creator-name">Carla Mendes</h3>
+                                <p class="creator-location"><i class="fas fa-map-marker-alt"></i> Belo Horizonte, MG</p>
+                                <div class="creator-stats">
+                                    <div class="creator-stat"><div class="creator-stat-value">95K</div><div class="creator-stat-label">Seguidores</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">6.1%</div><div class="creator-stat-label">Engajamento</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">4.8/5</div><div class="creator-stat-label">Avaliação</div></div>
+                                </div>
+                                <div class="creator-actions">
+                                    <a href="perfil-criador.html?id=3" class="btn btn-primary">Ver Perfil</a>
+                                    <a href="perfil-criador.html?id=1#contact-section" class="btn btn-outline">Contatar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="creator-card">
+                            <div class="creator-image">
+                                <img src="https://s2-oglobo.glbimg.com/SwdOjRFjeW2iIePq5vL_ErKE370=/0x0:1080x1080/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/o/q/ISbpHERsimB6DNvacj2g/snapinsta.app-369080977-18382653874036131-1419709696409653797-n-1080.jpg" alt="Renato Cariane">
+                                <div class="creator-category">Fitness</div>
+                            </div>
+                            <div class="creator-info">
+                                <h3 class="creator-name">Renato Cariane</h3>
+                                <p class="creator-location"><i class="fas fa-map-marker-alt"></i> Curitiba, PR</p>
+                                <div class="creator-stats">
+                                    <div class="creator-stat"><div class="creator-stat-value">150K</div><div class="creator-stat-label">Seguidores</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">5.7%</div><div class="creator-stat-label">Engajamento</div></div>
+                                    <div class="creator-stat"><div class="creator-stat-value">4.9/5</div><div class="creator-stat-label">Avaliação</div></div>
+                                </div>
+                                <div class="creator-actions">
+                                    <a href="perfil-criador.html?id=4" class="btn btn-primary">Ver Perfil</a>
+                                    <a href="perfil-criador.html?id=1#contact-section" class="btn btn-outline">Contatar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pagination">
+                        <a href="#" class="page-item prev disabled">&laquo; Anterior</a>
+                        <a href="#" class="page-item active">1</a>
+                        <a href="#" class="page-item">2</a>
+                        <a href="#" class="page-item">3</a>
+                        <span class="page-item ellipsis">...</span>
+                        <a href="#" class="page-item">10</a>
+                        <a href="#" class="page-item next">Próximo &raquo;</a>
+                    </div>
+                </section>
+            </div> 
+        </div> 
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>INVOX3</h3>
+                    <p>Conectando marcas e criadores de conteúdo de forma autêntica e transparente.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="criadores.html" class="active">Criadores</a></li>
+                        <li><a href="para-marcas.html">Para Marcas</a></li>
+                        <li><a href="index.html#como-funciona-secao">Como Funciona</a></li>
+                        <li><a href="radar.html" class="active">Radar INVOX</a></li> </ul>
+            </nav>
+
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                        <li><a href="privacidade.html">Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="mailto:contato@invox3.com">contato@invox3.com</a></li>
+                        <li><a href="tel:+5531991915383">+55 (31) 99191-5383</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 INVOX3. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // JS para os sliders de filtro
+            const filtroSeguidoresSlider = document.getElementById('filtroSeguidores');
+            const filtroSeguidoresValorSpan = document.getElementById('filtroSeguidoresValor');
+            if (filtroSeguidoresSlider && filtroSeguidoresValorSpan) {
+                const formatarSeguidores = (valor) => {
+                    const num = parseInt(valor, 10);
+                    if (num == 0) { return '0';} // Caso especial para 0
+                    if (num >= 1000000) { return (num / 1000000).toFixed(num % 1000000 === 0 ? 0 : 1) + 'M'; }
+                    if (num >= 1000) { return (num / 1000).toFixed(0) + 'K'; }
+                    return num.toString();
+                };
+                filtroSeguidoresValorSpan.textContent = formatarSeguidores(filtroSeguidoresSlider.value);
+                filtroSeguidoresSlider.addEventListener('input', () => {
+                    filtroSeguidoresValorSpan.textContent = formatarSeguidores(filtroSeguidoresSlider.value);
+                });
+            }
+
+            const filtroEngajamentoSlider = document.getElementById('filtroEngajamento');
+            const filtroEngajamentoValorSpan = document.getElementById('filtroEngajamentoValor');
+            if (filtroEngajamentoSlider && filtroEngajamentoValorSpan) {
+                filtroEngajamentoValorSpan.textContent = filtroEngajamentoSlider.value + '%';
+                filtroEngajamentoSlider.addEventListener('input', () => {
+                    filtroEngajamentoValorSpan.textContent = filtroEngajamentoSlider.value + '%';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

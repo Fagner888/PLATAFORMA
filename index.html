@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVOX3 | Conectando Marcas e Criadores de Conteúdo</title>
+    <meta name="description" content="INVOX3 é a plataforma que conecta marcas a criadores de conteúdo para parcerias autênticas e impactantes.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">INVOX<span>3</span></a>
+            <nav>
+
+                <ul>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="criadores.html">Criadores</a></li>
+                    <li><a href="para-marcas.html">Para Marcas</a></li>
+                    <li><a href="#como-funciona-secao">Como Funciona</a></li>
+                    </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Entrar</a>
+                <a href="cadastro.html" class="btn btn-primary">Cadastrar</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Conectando Marcas e Criadores</h1>
+            <p>A forma mais simples e eficiente de encontrar influenciadores certos para a sua marca e impulsionar resultados reais.</p>
+            <div class="hero-actions">
+                <a href="para-marcas.html" class="btn btn-primary">Para Marcas</a>
+                <a href="cadastro.html?tipo=criador" class="btn btn-outline">Para Criadores</a>
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar por nicho, cidade ou estado..." class="search-input">
+                <button class="btn btn-primary search-button">Buscar</button>
+                <button class="btn btn-outline filter-button"><i class="fas fa-filter"></i> Filtrar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--white-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Criadores em Destaque</h2>
+                <p>Conheça alguns dos criadores de conteúdo mais talentosos da nossa plataforma.</p>
+            </div>
+
+          <div class="advanced-search">
+            <div class="advanced-search-header" id="toggleSearch">
+                <h3><i class="fas fa-search"></i> Busca Avançada</h3>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+
+            <div class="advanced-search-content" id="searchContent">
+    <form class="search-form" action="#" method="GET"> <div class="search-form-group">
+            <label for="nomeCriadorBusca">Nome do Criador</label>
+            <input type="text" id="nomeCriadorBusca" name="nomeCriador" placeholder="Digite o nome ou @ do criador">
+        </div>
+
+        <div class="search-form-group">
+            <label for="nicho">Nicho</label>
+            <select id="nicho" name="nicho">
+                <option value="">Todos os nichos</option>
+                <option value="arte_fotografia">Arte e Fotografia</option>
+                <option value="automotivo">Automotivo</option>
+                <option value="beleza">Beleza</option>
+                <option value="casa_decoracao">Casa e Decoração</option>
+                <option value="educacao">Educação</option>
+                <option value="esportes">Esportes</option>
+                <option value="familia_maternidade">Família e Maternidade</option>
+                <option value="financas_investimentos">Finanças e Investimentos</option>
+                <option value="fitness">Fitness</option>
+                <option value="games_streaming">Games e Streaming</option>
+                <option value="gastronomia">Gastronomia</option>
+                <option value="humor_comedia">Humor e Comédia</option>
+                <option value="livros_leitura">Livros e Leitura</option>
+                <option value="moda_lifestyle">Moda e Lifestyle</option>
+                <option value="musica_danca">Música e Dança</option>
+                <option value="negocios_empreendedorismo">Negócios e Empreendedorismo</option>
+                <option value="pets">Pets</option>
+                <option value="saude_bemestar">Saúde e Bem-estar</option>
+                <option value="sustentabilidade_eco">Sustentabilidade e Eco</option>
+                <option value="tecnologia">Tecnologia</option>
+                <option value="viagem">Viagem</option>
+                <option value="outros">Outros</option>
+            </select>
+        </div>
+
+        <div class="search-form-group">
+            <label for="plataforma">Plataforma</label>
+            <select id="plataforma" name="plataforma">
+                <option value="">Todas as plataformas</option>
+                <option value="instagram">Instagram</option>
+                <option value="tiktok">TikTok</option>
+                <option value="youtube">YouTube</option>
+            </select>
+        </div>
+
+        <div class="search-form-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Digite uma cidade...">
+        </div>
+
+        <div class="search-form-group">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado">
+                <option value="">Todos os estados</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
+
+        <div class="search-form-group">
+            <label for="seguidores" class="has-slider-value">Mínimo de Seguidores: <span id="seguidores-valor">500K</span></label>
+            <input type="range" id="seguidores" name="seguidores" min="0" max="1000000" step="10000" value="500000">
+        </div>
+
+        <div class="search-form-group">
+            <label for="engajamento" class="has-slider-value">Taxa de Engajamento Mínima: <span id="engajamento-valor">10%</span></label>
+            <input type="range" id="engajamento" name="engajamento" min="0" max="30" step="1" value="10">
+        </div>
+
+        <div class="search-actions">
+            <button type="reset" class="btn btn-outline">Limpar</button>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
+</div>
+            <div class="filter-container">
+                <div class="filter-item active">Todos</div>
+                <div class="filter-item">Moda e Lifestyle</div>
+                <div class="filter-item">Tecnologia</div>
+                <div class="filter-item">Gastronomia</div>
+                <div class="filter-item">Fitness</div>
+                <div class="filter-item">Beleza</div>
+                <div class="filter-item">Viagem</div>
+            </div>
+
+            <div class="creators-grid">
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="https://images.pexels.com/photos/1642228/pexels-photo-1642228.jpeg" alt="Ana Silva">
+                        <div class="creator-category">Moda e Lifestyle</div>
+                    </div>
+                    <div class="creator-info">
+                        <h3 class="creator-name">Ana Silva</h3>
+                        <p class="creator-location"><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                        <div class="creator-stats">
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">125K</div>
+                                <div class="creator-stat-label">Seguidores</div>
+                            </div>
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">4.8%</div>
+                                <div class="creator-stat-label">Engajamento</div>
+                            </div>
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">4.9/5</div>
+                                <div class="creator-stat-label">Avaliação</div>
+                            </div>
+                        </div>
+                        <div class="creator-actions">
+                            <a href="perfil-criador.html?id=1" class="btn btn-primary">Ver Perfil</a>
+                            <a href="perfil-criador.html?id=1#contact-section" class="btn btn-outline">Contatar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="https://images.pexels.com/photos/936119/pexels-photo-936119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Pedro Costa">
+                        <div class="creator-category">Tecnologia</div>
+                    </div>
+                    <div class="creator-info">
+                        <h3 class="creator-name">Pedro Costa</h3>
+                        <p class="creator-location"><i class="fas fa-map-marker-alt"></i> Rio de Janeiro, RJ</p>
+                        <div class="creator-stats">
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">80K</div>
+                                <div class="creator-stat-label">Seguidores</div>
+                            </div>
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">5.2%</div>
+                                <div class="creator-stat-label">Engajamento</div>
+                            </div>
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">4.7/5</div>
+                                <div class="creator-stat-label">Avaliação</div>
+                            </div>
+                        </div>
+                        <div class="creator-actions">
+                            <a href="perfil-criador.html?id=2" class="btn btn-primary">Ver Perfil</a>
+                            <a href="perfil-criador.html?id=1#contact-section" class="btn btn-outline">Contatar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="https://images.pexels.com/photos/1852015/pexels-photo-1852015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Carla Mendes">
+                        <div class="creator-category">Gastronomia</div>
+                    </div>
+                    <div class="creator-info">
+                        <h3 class="creator-name">Carla Mendes</h3>
+                        <p class="creator-location"><i class="fas fa-map-marker-alt"></i> Belo Horizonte, MG</p>
+                        <div class="creator-stats">
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">95K</div>
+                                <div class="creator-stat-label">Seguidores</div>
+                            </div>
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">6.1%</div>
+                                <div class="creator-stat-label">Engajamento</div>
+                            </div>
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">4.8/5</div>
+                                <div class="creator-stat-label">Avaliação</div>
+                            </div>
+                        </div>
+                        <div class="creator-actions">
+                            <a href="perfil-criador.html?id=3" class="btn btn-primary">Ver Perfil</a>
+                            <a href="perfil-criador.html?id=1#contact-section" class="btn btn-outline">Contatar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="creator-card">
+                    <div class="creator-image">
+                        <img src="https://s2-oglobo.glbimg.com/SwdOjRFjeW2iIePq5vL_ErKE370=/0x0:1080x1080/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2023/o/q/ISbpHERsimB6DNvacj2g/snapinsta.app-369080977-18382653874036131-1419709696409653797-n-1080.jpg" alt="Renato Cariane">
+                        <div class="creator-category">Fitness</div>
+                    </div>
+                    <div class="creator-info">
+                        <h3 class="creator-name">Renato Cariane</h3>
+                        <p class="creator-location"><i class="fas fa-map-marker-alt"></i> Curitiba, PR</p>
+                        <div class="creator-stats">
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">150K</div>
+                                <div class="creator-stat-label">Seguidores</div>
+                            </div>
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">5.7%</div>
+                                <div class="creator-stat-label">Engajamento</div>
+                            </div>
+                            <div class="creator-stat">
+                                <div class="creator-stat-value">4.9/5</div>
+                                <div class="creator-stat-label">Avaliação</div>
+                            </div>
+                        </div>
+                        <div class="creator-actions">
+                            <a href="perfil-criador.html?id=4" class="btn btn-primary">Ver Perfil</a>
+                            <a href="perfil-criador.html?id=1#contact-section" class="btn btn-outline">Contatar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-more-container">
+                <a href="criadores.html" class="btn btn-outline">Ver Todos os Criadores</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section how-it-works" id="como-funciona-secao">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Funciona</h2>
+                <p>Conectamos marcas e criadores de conteúdo de forma simples e eficiente.</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="step-title">Encontre Criadores</h3>
+                    <p>Busque e filtre criadores por nicho, localização e métricas de engajamento para encontrar o parceiro ideal para sua marca.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 class="step-title">Conecte-se</h3>
+                    <p>Entre em contato diretamente com os criadores, discuta propostas e estabeleça parcerias autênticas e transparentes.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="step-title">Cresça Juntos</h3>
+                    <p>Desenvolva relacionamentos duradouros e amplie o alcance da sua marca com parcerias estratégicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="section inspirations section--white-bg">
+        <div class="container">
+            <div class="section-header">
+                <h2>Inspirações</h2>
+                <p>Descubra criadores que estão definindo tendências e construindo comunidades incríveis!</p>
+            </div>
+
+            <div class="inspirations-carousel-wrapper">
+                <div class="inspirations-carousel">
+                    <div class="inspiration-slide">
+                        <div class="inspiration-card">
+                            <div class="inspiration-image-wrapper">
+                                <img src="https://s2.glbimg.com/mDzcTBlSmTQ261DD9dyyv4fRqPE=/e.glbimg.com/og/ed/f/original/2021/04/12/amor_pela_camilla_pudim_156497376_415417759756859_8517130596760721107_n.jpg" alt="Camila Pudim">
+                                </div>
+                            <div class="inspiration-info">
+                                <h3 class="inspiration-name">Camila Pudim</h3>
+                                <p class="inspiration-metric">6.1M de Seguidores</p>
+                                <a href="perfil-criador.html?id=XYZ" class="btn btn-outline inspiration-link">Ver Perfil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inspiration-slide">
+                        <div class="inspiration-card">
+                            <div class="inspiration-image-wrapper">
+                                <img src="https://newr7-r7-prod.web.arc-cdn.net/resizer/v2/3ZEBXI7YJFELTOFK4QD3AJFUG4.jpg?auth=90fc8bfa59bdf9459fbec6f3206b18a9d65d8a274d5123d8dbe4a8982f5ee7d5&width=1600&height=1205" alt="Virgínia Fonseca">
+                            </div>
+                            <div class="inspiration-info">
+                                <h3 class="inspiration-name">Virgínia Fonseca</h3>
+                                <p class="inspiration-metric">73% Engajamento</p>
+                                <a href="perfil-criador.html?id=ABC" class="btn btn-outline inspiration-link">Ver Perfil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inspiration-slide">
+                        <div class="inspiration-card">
+                            <div class="inspiration-image-wrapper">
+                                <img src="https://cdn.shopify.com/s/files/1/0072/9671/2755/files/coringa-loud_2048x2048.jpg?v=1719524663" alt="Loud Coringa">
+                            </div>
+                            <div class="inspiration-info">
+                                <h3 class="inspiration-name">Loud Coringa</h3>
+                                <p class="inspiration-metric">Top Streamer</p>
+                                <a href="perfil-criador.html?id=DEF" class="btn btn-outline inspiration-link">Ver Perfil</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                <button class="carousel-button prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-button next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+                <div class="carousel-indicators">
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="creator-signup-banner">
+        <div class="container creator-signup-content">
+            <h2>Pronto para Transformar sua Estratégia Digital?</h2>
+            <p>Junte-se a marcas e criadores que já estão construindo parcerias de sucesso na INVOX3.</p>
+            <div class="creator-signup-actions">
+                <a href="cadastro.html?tipo=marca" class="btn btn-primary">Cadastrar como Marca</a>
+                <a href="cadastro.html?tipo=criador" class="btn btn-outline">Cadastrar como Criador</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>INVOX3</h3>
+                    <p>Conectando marcas e criadores de conteúdo de forma autêntica e transparente.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="criadores.html" class="active">Criadores</a></li>
+                        <li><a href="para-marcas.html">Para Marcas</a></li>
+                        <li><a href="index.html#como-funciona-secao">Como Funciona</a></li>
+                        <li><a href="radar.html" class="active">Radar INVOX</a></li> </ul>
+            </nav>
+
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                        <li><a href="privacidade.html">Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="mailto:contato@invox3.com">contato@invox3.com</a></li>
+                        <li><a href="tel:+5531991915383">+55 (31) 99191-5383</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 INVOX3. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // =======================================================
+            // SEU CÓDIGO JAVASCRIPT ORIGINAL
+            // =======================================================
+
+            // Toggle Advanced Search
+            const toggleSearchButton = document.getElementById('toggleSearch');
+            if (toggleSearchButton) {
+                toggleSearchButton.addEventListener('click', function() {
+                    const searchContent = document.getElementById('searchContent');
+                    if (searchContent) {
+                        searchContent.classList.toggle('active');
+                        const icon = this.querySelector('i.fas');
+                        if (icon) {
+                            if (searchContent.classList.contains('active')) {
+                                icon.classList.remove('fa-chevron-down');
+                                icon.classList.add('fa-chevron-up');
+                            } else {
+                                icon.classList.remove('fa-chevron-up');
+                                icon.classList.add('fa-chevron-down');
+                            }
+                        }
+                    }
+                });
+            }
+
+            // Filter Items
+            const filterItems = document.querySelectorAll('.filter-item');
+            if (filterItems.length > 0) {
+                filterItems.forEach(item => {
+                    item.addEventListener('click', function() {
+                        filterItems.forEach(i => i.classList.remove('active'));
+                        this.classList.add('active');
+                        // Lógica real de filtragem viria aqui
+                    });
+                });
+            }
+
+            // Micro-interações para cards
+            const interactiveCards = document.querySelectorAll('.creator-card, .step-card, .inspiration-card');
+            if (interactiveCards.length > 0) {
+                interactiveCards.forEach(card => {
+                    if (!card.classList.contains('inspiration-card')) { 
+                        card.addEventListener('mouseenter', function() {
+                            this.style.transform = 'translateY(-5px)';
+                            this.style.boxShadow = 'var(--box-shadow-hover)';
+                        });
+                        card.addEventListener('mouseleave', function() {
+                            this.style.transform = 'translateY(0)';
+                            this.style.boxShadow = 'var(--box-shadow)';
+                        });
+                    }
+                });
+            }
+
+            // =======================================================
+            // CÓDIGO DO CARROSSEL DE INSPIRAÇÕES
+            // =======================================================
+            const inspirationsCarouselWrappers = document.querySelectorAll('.inspirations-carousel-wrapper');
+
+            inspirationsCarouselWrappers.forEach(wrapper => {
+                const carousel = wrapper.querySelector('.inspirations-carousel');
+                const prevButton = wrapper.querySelector('.carousel-button.prev');
+                const nextButton = wrapper.querySelector('.carousel-button.next');
+                
+                if (!carousel || !prevButton || !nextButton) {
+                    return; 
+                }
+
+                const calculateScrollAmount = () => {
+                    const firstSlide = carousel.querySelector('.inspiration-slide');
+                    if (firstSlide) {
+                        const slideWidth = firstSlide.offsetWidth;
+                        const carouselStyle = window.getComputedStyle(carousel);
+                        const gap = parseFloat(carouselStyle.gap) || 0;
+                        return slideWidth + gap;
+                    }
+                    return 300; // Fallback
+                };
+
+                let scrollAmount = calculateScrollAmount();
+
+                window.addEventListener('resize', () => {
+                    scrollAmount = calculateScrollAmount();
+                });
+
+                prevButton.addEventListener('click', () => {
+                    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                });
+
+                nextButton.addEventListener('click', () => {
+                    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                });
+            });
+
+            // =======================================================
+            // ATUALIZAR VALORES DOS SLIDERS NA BUSCA AVANÇADA  <-- CÓDIGO NOVO AQUI
+            // =======================================================
+            
+            // Slider de Seguidores
+            const seguidoresSlider = document.getElementById('seguidores');
+            const seguidoresValorSpan = document.getElementById('seguidores-valor');
+
+            if (seguidoresSlider && seguidoresValorSpan) {
+                // Função para formatar o número de seguidores
+                const formatarSeguidores = (valor) => {
+                    const num = parseInt(valor, 10);
+                    if (num >= 1000000) {
+                        return (num / 1000000).toFixed(1).replace('.0', '') + 'M';
+                    }
+                    if (num >= 1000) {
+                        return (num / 1000).toFixed(0) + 'K';
+                    }
+                    return num.toString();
+                };
+
+                // Define o valor inicial formatado
+                seguidoresValorSpan.textContent = formatarSeguidores(seguidoresSlider.value);
+
+                // Atualiza o span quando o slider mudar
+                seguidoresSlider.addEventListener('input', () => {
+                    seguidoresValorSpan.textContent = formatarSeguidores(seguidoresSlider.value);
+                });
+            }
+
+            // Slider de Taxa de Engajamento
+            const engajamentoSlider = document.getElementById('engajamento');
+            const engajamentoValorSpan = document.getElementById('engajamento-valor');
+
+            if (engajamentoSlider && engajamentoValorSpan) {
+                // Define o valor inicial formatado
+                engajamentoValorSpan.textContent = engajamentoSlider.value + '%';
+
+                // Atualiza o span quando o slider mudar
+                engajamentoSlider.addEventListener('input', () => {
+                    engajamentoValorSpan.textContent = engajamentoSlider.value + '%';
+                });
+            }
+            // =======================================================
+            // FIM DO CÓDIGO DOS SLIDERS
+            // =======================================================
+
+        }); // Fim do document.addEventListener('DOMContentLoaded', ...)
+    </script>
+    </body>
+</html>

@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVOX3 | Painel do Criador</title>
+    <meta name="description" content="Gerencie suas oportunidades, perfil e performance na INVOX3.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard-page">
+
+    <header class="dashboard-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">INVOX<span>3</span></a>
+            <div class="user-profile-menu">
+                <a href="#" class="user-avatar-link" id="userMenuToggle">
+                    <img src="https://images.pexels.com/photos/1642228/pexels-photo-1642228.jpeg" alt="Avatar do Criador" class="user-avatar-header">
+                    <span>Ana Silva</span>
+                    <i class="fas fa-chevron-down" style="font-size: 0.8em;"></i>
+                </a>
+                <div class="dropdown-menu" id="userDropdownMenu">
+                    <a href="#dashboard-perfil-publico" data-section-link="dashboard-perfil-publico"><i class="fas fa-user-circle"></i> Meu Perfil Público</a>
+                    <a href="#dashboard-configuracoes" data-section-link="dashboard-configuracoes"><i class="fas fa-cog"></i> Configurações da Conta</a>
+                    <hr>
+                    <a href="index.html" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="dashboard-horizontal-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#dashboard-painel-principal" class="active" data-section="dashboard-painel-principal"><i class="fas fa-compass"></i> Painel Principal</a></li>
+                <li><a href="#dashboard-oportunidades" data-section="dashboard-oportunidades"><i class="fas fa-envelope-open-text"></i> Propostas & Campanhas <span class="notification-badge">3</span></a></li>
+                <li><a href="#dashboard-meu-perfil-publico" data-section="dashboard-meu-perfil-publico"><i class="fas fa-user-edit"></i> Meu Perfil Público</a></li>
+                <li><a href="#dashboard-portfolio-cases" data-section="dashboard-portfolio-cases"><i class="fas fa-photo-video"></i> Portfólio & Cases</a></li>
+                <li><a href="#dashboard-minhas-metricas" data-section="dashboard-minhas-metricas"><i class="fas fa-chart-line"></i> Minhas Métricas</a></li>
+                <li><a href="#dashboard-notificacoes" data-section="dashboard-notificacoes"><i class="fas fa-bell"></i> Notificações <span class="notification-badge">2</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="dashboard-layout-wrapper-no-sidebar"> <main class="dashboard-content" style="margin-top: 0;"> 
+ <section id="dashboard-painel-principal" class="dashboard-section active-dashboard-section">
+                <div class="dashboard-section-header">
+                    <h1>Bem-vindo(a) de volta, [Nome do Criador]!</h1>
+                    <p>Aqui está um resumo da sua atividade na INVOX3.</p>
+                </div>
+
+                <div class="widget-card welcome-status-widget">
+                    <div class="profile-completeness">
+                        <div class="completeness-info">
+                            <span>Status do seu Perfil:</span>
+                            <strong>70% Completo</strong> </div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 70%;"></div> </div>
+                        <a href="#dashboard-meu-perfil-publico" data-section-link="dashboard-meu-perfil-publico" class="link-view-all profile-edit-link">
+                            Revisar / Editar Perfil <i class="fas fa-arrow-right fa-xs"></i>
+                        </a>
+                    </div>
+                    <hr class="widget-divider">
+                    <div class="quick-alerts">
+                        <p class="alert-item alert-proposals">
+                            <i class="fas fa-rocket"></i>Você tem <strong><a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades">3 Novas Propostas!</a></strong> </p>
+                        <p class="alert-item alert-messages">
+                            <i class="fas fa-comment-dots"></i>Última Mensagem: <a href="#dashboard-notificacoes" data-section-link="dashboard-notificacoes">Marca Top - "Detalhes..."</a> </p>
+                    </div>
+                </div>
+
+                <div class="dashboard-section-header dashboard-subheader" style="padding-bottom: var(--spacing-sm); margin-bottom: var(--spacing-md); margin-top: var(--spacing-xl);">
+                    <h2 style="font-size: 1.5rem; border:none; padding:0; color: var(--text-dark); font-weight: 600;">Suas Próximas Ações</h2>
+                </div>
+                <div class="dashboard-widgets-grid">
+                    <div class="widget-card">
+                        <h3><i class="fas fa-inbox"></i> Novas Propostas (<span id="numeroNovasPropostas">3</span>)</h3>
+                        <ul class="quick-metrics-list" style="margin-bottom: var(--spacing-sm);">
+                            <li>Marca Alfa - R$ XXXX <a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades" class="btn btn-sm btn-outline" style="margin-left:auto; padding: 3px 8px; font-size:0.8rem;">Ver</a></li>
+                            <li>Marca Beta - R$ YYY <a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades" class="btn btn-sm btn-outline" style="margin-left:auto; padding: 3px 8px; font-size:0.8rem;">Ver</a></li>
+                            </ul>
+                        <a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades" class="btn btn-sm btn-primary" style="align-self: flex-start;">Ver Todas as Propostas</a>
+                    </div>
+
+                    <div class="widget-card">
+                        <h3><i class="fas fa-pencil-alt"></i> Atualizar Portfólio</h3>
+                        <p>Seu último trabalho foi adicionado há <strong>[X dias/semanas]</strong>. Mantenha seu perfil atrativo!</p>
+                        <div style="display:flex; gap: var(--spacing-sm); margin-top: auto;">
+                            <a href="#dashboard-portfolio-cases" data-section-link="dashboard-portfolio-cases" class="btn btn-sm btn-primary">Adicionar Trabalho</a>
+                            <a href="#dashboard-portfolio-cases" data-section-link="dashboard-portfolio-cases" class="btn btn-sm btn-outline">Ver Meu Portfólio</a>
+                        </div>
+                    </div>
+
+                    <div class="widget-card">
+                        <h3><i class="fas fa-tachometer-alt"></i> Métricas Recentes</h3>
+                        <ul class="quick-metrics-list" style="margin-bottom: var(--spacing-sm);">
+                            <li>Engajamento Geral: <strong>XX%</strong> (<span class="metric-increase" style="color: var(--vibrant-lime-green);">+Z% <i class="fas fa-arrow-up fa-xs"></i></span>)</li>
+                            <li>Seguidores (Total): <strong>YYY</strong></li>
+                        </ul>
+                        <div style="display:flex; gap: var(--spacing-sm); margin-top: auto;">
+                            <a href="#dashboard-minhas-metricas" data-section-link="dashboard-minhas-metricas" class="btn btn-sm btn-outline">Ver Detalhes</a>
+                            <a href="#dashboard-minhas-metricas" data-section-link="dashboard-minhas-metricas" class="btn btn-sm btn-outline">Atualizar Manualmente</a>
+                        </div>
+                    </div>
+                </div> <div class="dashboard-section-header dashboard-subheader" style="margin-top: var(--spacing-xl);">
+                    <h2><i class="fas fa-star" style="color: #FFD700;"></i> Minhas Campanhas Ativas</h2>
+                </div>
+                <div class="widget-card campaigns-widget">
+                    <div class="campaign-item">
+                        <img src="https://via.placeholder.com/60x60/cccccc/1E1E1E?text=Logo" alt="Logo Marca" class="campaign-brand-logo">
+                        <div class="campaign-item-details">
+                            <h4 class="campaign-item-title">Campanha XPTO com [Marca ABC]</h4>
+                            <p class="campaign-item-status">Status: <span class="status-tag status-pending">Aguardando Aprovação</span></p>
+                            <div class="campaign-progress">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <p class="campaign-item-next-step">Próxima Etapa: Enviar link do post até DD/MM</p>
+                            <a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades" class="btn btn-sm btn-primary campaign-manage-btn">Gerenciar</a>
+                        </div>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="https://via.placeholder.com/60x60/777777/FFFFFF?text=Job" alt="Logo Marca" class="campaign-brand-logo">
+                        <div class="campaign-item-details">
+                            <h4 class="campaign-item-title">Job Incrível com [Marca Top]</h4>
+                            <p class="campaign-item-status">Status: <span class="status-tag status-inprogress">Em Andamento</span></p>
+                            <div class="campaign-progress">
+                                <div class="progress-bar-container">
+                                    <div class="progress-bar" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <p class="campaign-item-next-step">Próxima Etapa: Publicar e enviar métricas</p>
+                            <a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades" class="btn btn-sm btn-primary campaign-manage-btn">Gerenciar</a>
+                        </div>
+                    </div>
+                    <a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades" class="link-view-all" style="margin-top: var(--spacing-md); display: block; text-align: right;">Ver Todas as Campanhas Ativas</a>
+                </div>
+
+                <div class="dashboard-section-header dashboard-subheader" style="margin-top: var(--spacing-xl);">
+                    <h2><i class="fas fa-lightbulb" style="color: #FFC107;"></i> Dicas e Recursos</h2>
+                </div>
+                <div class="widget-card dicas-recursos-widget">
+                    <ul class="resource-list">
+                        <li>
+                            <a href="link-para-seu-blog-post-1.html" target="_blank" title="Abrir em nova aba">
+                                <i class="fas fa-newspaper"></i> 
+                                <span>Como criar um portfólio que realmente impressiona as marcas</span>
+                                <i class="fas fa-external-link-alt fa-xs link-arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="link-para-seu-guia.pdf" download title="Baixar PDF">
+                                <i class="fas fa-book-open"></i>
+                                <span>Guia de precificação para sua próxima campanha de marketing de influência</span>
+                                <i class="fas fa-download fa-xs link-arrow"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="faq.html" target="_blank" title="Abrir em nova aba"> 
+                                <i class="fas fa-question-circle"></i>
+                                <span>Perguntas Frequentes sobre a Plataforma INVOX3</span>
+                                <i class="fas fa-external-link-alt fa-xs link-arrow"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+
+          <section id="dashboard-oportunidades" class="dashboard-section" style="display:none;">
+                <div class="dashboard-section-header">
+                    <h1><i class="fas fa-envelope-open-text"></i> Propostas & Campanhas</h1>
+                    <p>Gerencie suas oportunidades de parceria e acompanhe suas campanhas ativas.</p>
+                </div>
+
+                <div class="dashboard-subsection" id="propostas-recebidas">
+                    <div class="dashboard-subsection-header"> <h2><i class="fas fa-inbox"></i> Propostas Recebidas</h2>
+                        <div class="subsection-actions">
+                            <select id="filterPropostasStatus" name="filterPropostasStatus" class="form-control form-control-sm" style="max-width: 180px; display:inline-block; vertical-align: middle;">
+                                <option value="">Filtrar por Status</option>
+                                <option value="nova">Nova</option>
+                                <option value="visualizada">Visualizada</option>
+                                <option value="respondida">Respondida</option>
+                                <option value="negociando">Negociando</option>
+                                <option value="aceita">Aceita</option>
+                                <option value="rejeitada">Rejeitada</option>
+                            </select>
+                            </div>
+                    </div>
+
+                    <div class="proposals-list item-list-cards"> <div class="proposal-item card-list-item status-new"> <div class="item-main-info">
+                                <img src="https://via.placeholder.com/50x50/777/fff?text=LogoM" alt="Logo Marca X" class="item-brand-logo">
+                                <div class="item-text-content">
+                                    <h4 class="item-title">Campanha de Lançamento Coleção Outono - Marca FashionX</h4>
+                                    <p class="item-subtitle">Enviado por: <strong>FashionX Modas Ltda.</strong></p>
+                                    <p class="item-meta">Recebida em: 28/05/2025  | Valor Ofertado: <strong class="price-tag">R$ 1.250,00</strong></p>
+                                </div>
+                            </div>
+                            <div class="item-status-actions">
+                                <span class="status-tag status-new">Nova</span>
+                                <div class="item-actions">
+                                    <a href="#" class="btn btn-sm btn-primary">Ver Detalhes</a>
+                                    <a href="#" class="btn btn-sm btn-outline">Responder</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="proposal-item card-list-item status-negotiating">
+                            <div class="item-main-info">
+                                <img src="https://via.placeholder.com/50x50/ABC/fff?text=SY" alt="Logo Startup Y" class="item-brand-logo">
+                                <div class="item-text-content">
+                                    <h4 class="item-title">Divulgação App de Bem-Estar - Startup YHealth</h4>
+                                    <p class="item-subtitle">Enviado por: <strong>YHealth Inovações</strong></p>
+                                    <p class="item-meta">Recebida em: 27/05/2025  | Valor Ofertado: <strong class="price-tag">R$ 800,00</strong></p>
+                                </div>
+                            </div>
+                             <div class="item-status-actions">
+                                <span class="status-tag status-negotiating">Negociando</span>
+                                <div class="item-actions">
+                                    <a href="#" class="btn btn-sm btn-primary">Ver Negociação</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="proposal-item card-list-item status-replied">
+                            <div class="item-main-info">
+                                <img src="https://via.placeholder.com/50x50/000/fff?text=Games" alt="Logo GG Games" class="item-brand-logo">
+                                <div class="item-text-content">
+                                    <h4 class="item-title">Review Jogo "Cyber Realm" - GG Games Studio</h4>
+                                    <p class="item-subtitle">Enviado por: <strong>GG Games Studio</strong></p>
+                                    <p class="item-meta">Recebida em: 26/05/2025  | Valor Ofertado: <strong class="price-tag">R$ 1.500,00</strong></p>
+                                </div>
+                            </div>
+                             <div class="item-status-actions">
+                                <span class="status-tag status-replied">Respondida</span>
+                                <div class="item-actions">
+                                    <a href="#" class="btn btn-sm btn-outline">Ver Histórico</a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    
+                    <div class="pagination" style="justify-content: flex-start; margin-top:var(--spacing-lg);"> 
+                        <p><em>(Paginação aparecerá aqui se necessário)</em></p>
+                    </div>
+                </div> <div class="dashboard-subsection" id="campanhas-ativas" style="margin-top: var(--spacing-xxl);">
+                    <div class="dashboard-subsection-header">
+                        <h2><i class="fas fa-tasks"></i> Campanhas em Andamento</h2>
+                        <div class="subsection-actions">
+                             <select id="filterCampanhasStatus" name="filterCampanhasStatus" class="form-control form-control-sm" style="max-width: 200px; display:inline-block; vertical-align: middle;">
+                                <option value="">Filtrar por Etapa</option>
+                                <option value="aguardando-conteudo">Aguardando Conteúdo</option>
+                                <option value="conteudo-aprovacao">Conteúdo em Aprovação</option>
+                                <option value="publicacao-agendada">Publicação Agendada</option>
+                                <option value="aguardando-metricas">Aguardando Métricas</option>
+                            </select>
+                        </div>
+                    </div>
+                     <div class="active-campaigns-list item-list-cards">
+                        <div class="campaign-item card-list-item status-aguardando-conteudo"> <img src="https://via.placeholder.com/60x60/1ABC9C/FFFFFF?text=Verde" alt="Logo Marca Verde" class="item-brand-logo"> <div class="item-text-content"> <h4 class="item-title">Campanha "Vida Sustentável" - EcoMarca Inc.</h4>
+                                <p class="campaign-item-status">Status: <span class="status-tag status-aguardando-conteudo">Aguardando Envio do Rascunho</span></p>
+                                <div class="campaign-progress">
+                                    <div class="progress-bar-container">
+                                        <div class="progress-bar" style="width: 25%; background-color: var(--vibrant-lime-green);"></div> </div>
+                                </div>
+                                <p class="campaign-item-next-step">Prazo para 1º rascunho: 05/06/2025</p>
+                            </div>
+                            <div class="item-status-actions"> <div class="item-actions">
+                                    <a href="#" class="btn btn-sm btn-primary campaign-manage-btn">Gerenciar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="campaign-item card-list-item status-publicacao-agendada">
+                            <img src="https://via.placeholder.com/60x60/3498DB/FFFFFF?text=Azul" alt="Logo Marca Azul" class="item-brand-logo">
+                            <div class="item-text-content">
+                                <h4 class="item-title">Lançamento App "Conecta Global" - Tech Solutions</h4>
+                                <p class="campaign-item-status">Status: <span class="status-tag status-publicacao-agendada">Publicação Agendada</span></p>
+                                <div class="campaign-progress">
+                                     <div class="progress-bar-container">
+                                        <div class="progress-bar" style="width: 90%; background-color: var(--header-primary-color);"></div> </div>
+                                </div>
+                                <p class="campaign-item-next-step">Publicar em: 10/06/2025</p>
+                            </div>
+                            <div class="item-status-actions">
+                                <div class="item-actions">
+                                    <a href="#" class="btn btn-sm btn-outline campaign-manage-btn">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+             
+                          </section>
+<section id="dashboard-portfolio-cases" class="dashboard-section" style="display:none;">
+                <div class="dashboard-section-header">
+                    <h1><i class="fas fa-photo-video"></i> Portfólio & Cases de Sucesso</h1>
+                    <p>Mostre seus melhores trabalhos e os resultados que você já entregou.</p>
+                </div>
+
+                <div class="dashboard-subsection" id="gerenciar-portfolio">
+                    <div class="dashboard-subsection-header">
+                        <h2><i class="fas fa-images"></i> Meu Portfólio de Conteúdos</h2>
+                        <div class="subsection-actions">
+                            <button type="button" class="btn btn-sm btn-primary" id="btnAdicionarPortfolioItem">
+                                <i class="fas fa-plus"></i> Adicionar Novo Item ao Portfólio
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-items-grid item-list-cards"> <div class="portfolio-item card-list-item">
+                            <div class="portfolio-item-thumbnail">
+                                <img src="https://via.placeholder.com/350x200/ABFF4F/1E1E1E?text=Video+Review+Produto" alt="Thumbnail Portfólio Vídeo">
+                                <span class="portfolio-item-type video-type"><i class="fas fa-video"></i> Vídeo</span>
+                            </div>
+                            <div class="portfolio-item-info">
+                                <h4 class="item-title">Review Completo Novo Gadget Tech (YouTube)</h4>
+                                <p class="item-meta">Publicado em: 15/04/2025 | Cliente: TechNow</p>
+                            </div>
+                            <div class="item-actions portfolio-item-actions">
+                                <button type="button" class="btn btn-xs btn-outline"><i class="fas fa-edit"></i> Editar</button>
+                                <button type="button" class="btn btn-xs btn-outline-danger"><i class="fas fa-trash"></i> Excluir</button>
+                            </div>
+                        </div>
+                        
+                        <div class="portfolio-item card-list-item">
+                            <div class="portfolio-item-thumbnail">
+                                <img src="https://via.placeholder.com/350x200/FF3D6C/FFFFFF?text=Post+Instagram+Moda" alt="Thumbnail Portfólio Imagem">
+                                <span class="portfolio-item-type image-type"><i class="fas fa-camera-retro"></i> Post Instagram</span>
+                            </div>
+                            <div class="portfolio-item-info">
+                                <h4 class="item-title">Look do Dia: Tendência Verão - Parceria FashionStyle</h4>
+                                <p class="item-meta">Publicado em: 10/05/2025 | Cliente: FashionStyle Co.</p>
+                            </div>
+                            <div class="item-actions portfolio-item-actions">
+                                <button type="button" class="btn btn-xs btn-outline"><i class="fas fa-edit"></i> Editar</button>
+                                <button type="button" class="btn btn-xs btn-outline-danger"><i class="fas fa-trash"></i> Excluir</button>
+                            </div>
+                        </div>
+
+                        </div>
+                     <div class="pagination" style="justify-content: flex-start; margin-top:var(--spacing-lg);">
+                        <p><em>(Paginação do portfólio aparecerá aqui se necessário)</em></p>
+                    </div>
+                </div> <div class="dashboard-subsection" id="gerenciar-cases" style="margin-top: var(--spacing-xxl);">
+                    <div class="dashboard-subsection-header">
+                        <h2><i class="fas fa-award"></i> Meus Cases de Sucesso</h2>
+                         <div class="subsection-actions">
+                            <button type="button" class="btn btn-sm btn-primary" id="btnAdicionarCase">
+                                <i class="fas fa-plus"></i> Adicionar Novo Case
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cases-list item-list-cards"> <p><em>(Seus cases de sucesso detalhados, com KPIs e resultados, aparecerão aqui...)</em></p>
+                        </div>
+                </div> <div id="modalAdicionarEditarPortfolio" class="dashboard-modal">
+                    <div class="modal-content widget-card">
+                        <div class="modal-header dashboard-subsection-header">
+                            <h3 id="modalPortfolioTitle">Adicionar Novo Item ao Portfólio</h3>
+                            <button type="button" class="close-modal-btn">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formPortfolioItem">
+                                <div class="form-group">
+                                    <label for="portfolioItemTitulo">Título do Trabalho</label>
+                                    <input type="text" id="portfolioItemTitulo" name="titulo" class="form-control" required placeholder="Ex: Review Completo XPTO">
+                                </div>
+                                <div class="form-group">
+                                    <label for="portfolioItemDescricao">Descrição Curta</label>
+                                    <textarea id="portfolioItemDescricao" name="descricao" class="form-control" rows="3" placeholder="Uma breve descrição do trabalho realizado"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="portfolioItemTipo">Tipo de Conteúdo</label>
+                                    <select id="portfolioItemTipo" name="tipo" class="form-control">
+                                        <option value="imagem">Imagem (Post Instagram, Foto, etc.)</option>
+                                        <option value="video">Vídeo (YouTube, TikTok, Reels)</option>
+                                        <option value="artigo">Artigo de Blog</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="portfolioItemMedia">Link da Mídia ou Upload</label>
+                                    <input type="url" id="portfolioItemLink" name="link_media" class="form-control" placeholder="https://...">
+                                    <span style="display:block; text-align:center; margin: var(--spacing-xs) 0;">OU</span>
+                                    <input type="file" id="portfolioItemUpload" name="upload_media" class="form-control-file">
+                                </div>
+                                <div class="form-group">
+                                    <label for="portfolioItemCliente">Cliente/Marca (Opcional)</label>
+                                    <input type="text" id="portfolioItemCliente" name="cliente" class="form-control" placeholder="Nome da marca para quem fez o trabalho">
+                                </div>
+                                <div class="form-group">
+                                    <label for="portfolioItemData">Data de Publicação</label>
+                                    <input type="date" id="portfolioItemData" name="data_publicacao" class="form-control">
+                                </div>
+                                <div class="form-actions" style="text-align:right; margin-top:var(--spacing-lg);">
+                                    <button type="button" class="btn btn-outline close-modal-btn">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Salvar Item</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+             </section>
+
+<section id="dashboard-minhas-metricas" class="dashboard-section" style="display:none;">
+                <div class="dashboard-section-header">
+                    <h1><i class="fas fa-chart-line"></i> Minhas Métricas</h1>
+                    <p>Acompanhe sua performance, atualize seus dados e visualize sua evolução.</p>
+                </div>
+
+                <div class="widget-card metricas-update-card"> 
+                    <h3><i class="fas fa-edit"></i> Atualizar Métricas Manuais</h3>
+                    <form id="formAtualizarMetricas" action="#" method="POST">
+                        <p class="settings-form-intro" style="margin-bottom: var(--spacing-lg);">Mantenha suas métricas atualizadas para aumentar sua relevância nas buscas das marcas. Preencha os campos abaixo com seus dados mais recentes.</p>
+                        
+                        <div class="metrics-form-grid">
+                            <div class="form-group">
+                                <label for="metricTotalSeguidores">Total de Seguidores (Consolidado)</label>
+                                <input type="number" id="metricTotalSeguidores" name="totalSeguidores" class="form-control" placeholder="Ex: 150000" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="metricTaxaEngajamento">Taxa de Engajamento Média Geral (%)</label>
+                                <input type="text" id="metricTaxaEngajamento" name="taxaEngajamento" class="form-control" placeholder="Ex: 4.2 (apenas números)">
+                                <small class="form-text text-muted">Use ponto para decimal, ex: 3.5</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="metricMediaVisualizacoes">Média de Visualizações (por post/vídeo)</label>
+                                <input type="number" id="metricMediaVisualizacoes" name="mediaVisualizacoes" class="form-control" placeholder="Ex: 85000" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="metricMediaComentarios">Média de Comentários (por post/vídeo)</label>
+                                <input type="number" id="metricMediaComentarios" name="mediaComentarios" class="form-control" placeholder="Ex: 350" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="metricMediaCompartilhamentos">Média de Compartilhamentos (por post/vídeo)</label>
+                                <input type="number" id="metricMediaCompartilhamentos" name="mediaCompartilhamentos" class="form-control" placeholder="Ex: 120" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="metricCrescimentoMensal">Taxa de Crescimento Mensal de Seguidores (%)</label>
+                                <input type="text" id="metricCrescimentoMensal" name="crescimentoMensal" class="form-control" placeholder="Ex: 12 (apenas números)">
+                            </div>
+
+                            <div class="form-group full-width-grid-item" style="margin-top: var(--spacing-md);">
+                                <h4 class="settings-subform-title"><i class="fas fa-share-alt"></i> Seguidores por Plataforma Principal</h4>
+                            </div>
+                            <div class="form-group platform-metric">
+                                <label for="metricSeguidoresInsta"><i class="fab fa-instagram"></i> Instagram</label>
+                                <input type="number" id="metricSeguidoresInsta" name="seguidoresInsta" class="form-control" placeholder="Ex: 100000" min="0">
+                            </div>
+                            <div class="form-group platform-metric">
+                                <label for="metricSeguidoresTikTok"><i class="fab fa-tiktok"></i> TikTok</label>
+                                <input type="number" id="metricSeguidoresTikTok" name="seguidoresTikTok" class="form-control" placeholder="Ex: 50000" min="0">
+                            </div>
+                            <div class="form-group platform-metric">
+                                <label for="metricSeguidoresYouTube"><i class="fab fa-youtube"></i> YouTube (Inscritos)</label>
+                                <input type="number" id="metricSeguidoresYouTube" name="inscritosYouTube" class="form-control" placeholder="Ex: 5000" min="0">
+                            </div>
+                            <div class="form-group platform-metric"></div>
+
+
+                            <div class="form-group full-width-grid-item" style="margin-top: var(--spacing-lg);">
+                                <h4 class="settings-subform-title"><i class="fas fa-users"></i> Demografia da Audiência</h4>
+                            </div>
+                            <div class="form-group full-width-grid-item">
+                                <p class="settings-form-intro" style="margin-bottom: var(--spacing-sm);">Preencha as porcentagens para Gênero e Faixa Etária. A soma de cada categoria deve ser próxima de 100%.</p>
+                            </div>
+
+                            <div class="form-group sub-group-title full-width-grid-item">
+                                <label style="font-weight:600;">Distribuição por Gênero (%):</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="demoGeneroFeminino">Feminino</label>
+                                <input type="number" id="demoGeneroFeminino" name="demoGeneroFeminino" class="form-control" placeholder="Ex: 60" min="0" max="100" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="demoGeneroMasculino">Masculino</label>
+                                <input type="number" id="demoGeneroMasculino" name="demoGeneroMasculino" class="form-control" placeholder="Ex: 35" min="0" max="100" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="demoGeneroOutros">Outros / Não Inf.</label>
+                                <input type="number" id="demoGeneroOutros" name="demoGeneroOutros" class="form-control" placeholder="Ex: 5" min="0" max="100" step="1">
+                            </div>
+                            
+                            <div class="form-group sub-group-title full-width-grid-item" style="margin-top: var(--spacing-md);">
+                                 <label style="font-weight:600;">Distribuição por Faixa Etária (%):</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="demoFaixa1317">13-17 anos</label>
+                                <input type="number" id="demoFaixa1317" name="demoFaixa1317" class="form-control" placeholder="Ex: 5" min="0" max="100" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="demoFaixa1824">18-24 anos</label>
+                                <input type="number" id="demoFaixa1824" name="demoFaixa1824" class="form-control" placeholder="Ex: 45" min="0" max="100" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="demoFaixa2534">25-34 anos</label>
+                                <input type="number" id="demoFaixa2534" name="demoFaixa2534" class="form-control" placeholder="Ex: 30" min="0" max="100" step="1">
+                            </div>
+                             <div class="form-group">
+                                <label for="demoFaixa3544">35-44 anos</label>
+                                <input type="number" id="demoFaixa3544" name="demoFaixa3544" class="form-control" placeholder="Ex: 15" min="0" max="100" step="1">
+                            </div>
+                             <div class="form-group">
+                                <label for="demoFaixa45mais">45+ anos</label>
+                                <input type="number" id="demoFaixa45mais" name="demoFaixa45mais" class="form-control" placeholder="Ex: 5" min="0" max="100" step="1">
+                            </div>
+                            <div class="form-group"> </div>
+
+
+                            <div class="form-group full-width-grid-item" style="margin-top: var(--spacing-md);">
+                                <label for="metricAudienciaOutrosDetalhes">Outros Destaques Demográficos (Localização, Interesses)</label>
+                                <textarea id="metricAudienciaOutrosDetalhes" name="audienciaOutrosDetalhes" class="form-control" rows="3" placeholder="Ex: Principais Interesses: Moda Sustentável, Fotografia. Top Cidades: São Paulo, Rio de Janeiro."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-actions" style="text-align:right; margin-top:var(--spacing-lg);">
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Salvar e Atualizar Métricas</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="widget-card social-connect-card" style="margin-top:var(--spacing-xl);">
+                    <h3><i class="fas fa-link"></i> Conectar Redes Sociais (Automático)</h3>
+                    <p class="settings-form-intro">Em breve, você poderá conectar suas redes para importação automática de métricas e relatórios ainda mais precisos.</p>
+                    <div class="social-connect-buttons">
+                        <button type="button" class="btn btn-outline disabled-feature"><i class="fab fa-instagram"></i> Conectar Instagram <small>(Em breve)</small></button>
+                        <button type="button" class="btn btn-outline disabled-feature"><i class="fab fa-tiktok"></i> Conectar TikTok <small>(Em breve)</small></button>
+                        <button type="button" class="btn btn-outline disabled-feature"><i class="fab fa-youtube"></i> Conectar YouTube <small>(Em breve)</small></button>
+                    </div>
+                </div>
+                
+                <div class="widget-card charts-card" style="margin-top:var(--spacing-xl);">
+                    <h3><i class="fas fa-chart-area"></i> Evolução da Performance</h3>
+                    <div class="charts-grid">
+                        <div class="chart-placeholder">
+                            <i class="fas fa-users"></i>
+                            <p>Gráfico de Evolução de Seguidores</p>
+                            <span>(Visualização em breve)</span>
+                        </div>
+                        <div class="chart-placeholder">
+                            <i class="fas fa-heartbeat"></i>
+                            <p>Gráfico de Taxa de Engajamento</p>
+                            <span>(Visualização em breve)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+               <section id="dashboard-notificacoes" class="dashboard-section" style="display:none;">
+                <div class="dashboard-section-header">
+                    <h1><i class="fas fa-bell"></i> Central de Notificações</h1>
+                    <p>Acompanhe todas as suas atualizações e alertas importantes da plataforma INVOX3.</p>
+                </div>
+
+                <div class="widget-card notifications-center-widget"> <div class="notifications-center-header"> <button type="button" class="btn btn-sm btn-outline" id="markAllNotificationsRead">
+                            <i class="fas fa-check-double"></i> Marcar todas como lidas
+                        </button>
+                        <select id="filterNotificacoesTipo" name="filterNotificacoesTipo" class="form-control form-control-sm" style="max-width: 200px; display:inline-block; vertical-align: middle;">
+                            <option value="">Filtrar por Tipo</option>
+                            <option value="proposta">Novas Propostas</option>
+                            <option value="mensagem">Novas Mensagens</option>
+                            <option value="campanha">Atualizações de Campanha</option>
+                            <option value="sistema">Avisos do Sistema</option>
+                        </select>
+                    </div>
+
+                    <ul class="notifications-center-list">
+                        <li class="notification-item unread">
+                            <div class="notification-icon icon-proposal">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <div class="notification-details">
+                                <p class="notification-text">
+                                    <strong>Nova Proposta Recebida:</strong> A marca "Estilo Urbano" enviou uma proposta para a campanha "Coleção Street Style".
+                                    <a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades" class="notification-action-link">Ver proposta</a>
+                                </p>
+                                <span class="notification-time">30 minutos atrás</span>
+                            </div>
+                            <div class="notification-item-actions">
+                                <button type="button" class="btn btn-xs btn-icon" title="Marcar como lida"><i class="far fa-circle"></i></button>
+                                </div>
+                        </li>
+
+                        <li class="notification-item read">
+                            <div class="notification-icon icon-campaign">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="notification-details">
+                                <p class="notification-text">
+                                    <strong>Atualização de Campanha:</strong> O conteúdo para "Review Gadget XPTO" com a "Tech Inovações" foi APROVADO.
+                                    <a href="#dashboard-oportunidades" data-section-link="dashboard-oportunidades" class="notification-action-link">Ver campanha</a>
+                                </p>
+                                <span class="notification-time">Ontem às 11:45</span>
+                            </div>
+                            <div class="notification-item-actions">
+                                <button type="button" class="btn btn-xs btn-icon" title="Marcar como não lida"><i class="far fa-check-circle" style="color: var(--vibrant-lime-green);"></i></button>
+                            </div>
+                        </li>
+
+                        <li class="notification-item read">
+                            <div class="notification-icon icon-system">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div class="notification-details">
+                                <p class="notification-text">
+                                    <strong>Aviso do Sistema:</strong> Lembrete: atualize suas métricas este mês para aumentar sua visibilidade.
+                                </p>
+                                <span class="notification-time">3 dias atrás</span>
+                            </div>
+                            <div class="notification-item-actions">
+                                </div>
+                        </li>
+                        </ul>
+                    
+                    <div class="pagination" style="justify-content: center; margin-top:var(--spacing-lg);">
+                        <p><em>(Paginação de notificações aparecerá aqui se necessário)</em></p>
+                    </div>
+                </div>
+            </section>
+
+<section id="dashboard-configuracoes" class="dashboard-section" style="display:none;">
+                <div class="dashboard-section-header">
+                    <h1><i class="fas fa-cog"></i> Configurações da Conta</h1>
+                    <p>Gerencie seus dados de login, preferências de notificação e outras configurações.</p>
+                </div>
+
+                <div class="widget-card settings-card"> <h3><i class="fas fa-user-shield"></i> Segurança da Conta</h3>
+                    
+                    <form id="formAlterarEmail" action="#" method="POST" class="settings-subform">
+                        <h4 class="settings-subform-title">Alterar Endereço de E-mail</h4>
+                        <div class="form-group">
+                            <label for="configEmailAtual">E-mail Atual</label>
+                            <input type="email" id="configEmailAtual" name="emailAtual" class="form-control" value="[criador@email.com]" readonly disabled>
+                        </div>
+                        <div class="form-group">
+                            <label for="configNovoEmail">Novo E-mail</label>
+                            <input type="email" id="configNovoEmail" name="novoEmail" class="form-control" placeholder="seu.novo.email@exemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="configConfirmarNovoEmail">Confirmar Novo E-mail</label>
+                            <input type="email" id="configConfirmarNovoEmail" name="confirmarNovoEmail" class="form-control" placeholder="Repita o novo e-mail" required>
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary">Salvar Novo E-mail</button>
+                    </form>
+
+                    <hr class="widget-divider">
+
+                    <form id="formAlterarSenha" action="#" method="POST" class="settings-subform">
+                        <h4 class="settings-subform-title">Alterar Senha</h4>
+                        <div class="form-group">
+                            <label for="configSenhaAtual">Senha Atual</label>
+                            <input type="password" id="configSenhaAtual" name="senhaAtual" class="form-control" required placeholder="Sua senha atual">
+                        </div>
+                        <div class="form-group">
+                            <label for="configNovaSenha">Nova Senha</label>
+                            <input type="password" id="configNovaSenha" name="novaSenha" class="form-control" required placeholder="Mínimo 8 caracteres">
+                        </div>
+                        <div class="form-group">
+                            <label for="configConfirmarNovaSenha">Confirmar Nova Senha</label>
+                            <input type="password" id="configConfirmarNovaSenha" name="confirmarNovaSenha" class="form-control" required placeholder="Repita a nova senha">
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-primary">Salvar Nova Senha</button>
+                    </form>
+                </div>
+
+                <div class="widget-card settings-card" style="margin-top: var(--spacing-xl);">
+                    <h3><i class="fas fa-envelope-open"></i> Preferências de Notificação</h3>
+                    <form id="formPreferenciasNotificacao" action="#" method="POST">
+                        <p class="settings-form-intro">Escolha como e quando você quer ser notificado:</p>
+                        <div class="checkbox-group-vertical settings-checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="notifNovaPropostaEmail" name="notifNovaPropostaEmail" value="email_proposta" checked>
+                                <label for="notifNovaPropostaEmail">Receber e-mails sobre Novas Propostas</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="notifNovaPropostaApp" name="notifNovaPropostaApp" value="app_proposta" checked>
+                                <label for="notifNovaPropostaApp">Mostrar notificações na plataforma sobre Novas Propostas</label>
+                            </div>
+                            <hr class="widget-divider-thin">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="notifNovaMensagemEmail" name="notifNovaMensagemEmail" value="email_mensagem">
+                                <label for="notifNovaMensagemEmail">Receber e-mails sobre Novas Mensagens</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="notifNovaMensagemApp" name="notifNovaMensagemApp" value="app_mensagem" checked>
+                                <label for="notifNovaMensagemApp">Mostrar notificações na plataforma sobre Novas Mensagens</label>
+                            </div>
+                            <hr class="widget-divider-thin">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="notifUpdatesCampanhaApp" name="notifUpdatesCampanhaApp" value="app_campanha" checked>
+                                <label for="notifUpdatesCampanhaApp">Mostrar notificações na plataforma sobre Atualizações de Campanha</label>
+                            </div>
+                            <hr class="widget-divider-thin">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="notifNovidadesInvoxEmail" name="notifNovidadesInvoxEmail" value="email_novidades" checked>
+                                <label for="notifNovidadesInvoxEmail">Receber e-mails sobre Novidades e Dicas da INVOX3</label>
+                            </div>
+                        </div>
+                        <div class="form-actions" style="text-align:right; margin-top:var(--spacing-lg);">
+                            <button type="submit" class="btn btn-primary">Salvar Preferências</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="widget-card settings-card danger-zone-card" style="margin-top: var(--spacing-xl);">
+                    <h3><i class="fas fa-database"></i> Gerenciamento de Dados e Conta</h3>
+                    <p class="settings-form-intro">Opções relacionadas à sua privacidade e à sua conta na plataforma.</p>
+                    <ul class="settings-link-list">
+                        <li><a href="privacidade.html" target="_blank">Ler nossa Política de Privacidade <i class="fas fa-external-link-alt fa-xs"></i></a></li>
+                        <li><a href="#exportar-dados" id="btnExportarDados" class="disabled-feature-link">Exportar meus dados <small>(Em breve)</small></a></li>
+                    </ul>
+                    <hr class="widget-divider">
+                    <div class="danger-zone-action">
+                        <h4 class="settings-subform-title" style="color: var(--danger-color);"><i class="fas fa-exclamation-triangle"></i> Zona de Perigo</h4>
+                        <p style="font-size:0.9rem; color:var(--text-medium); margin-bottom:var(--spacing-md);">Estas ações são importantes e algumas são irreversíveis. Tenha certeza antes de prosseguir.</p>
+                        <button type="button" class="btn btn-danger" id="btnExcluirConta"><i class="fas fa-trash-alt"></i> Excluir Minha Conta Permanentemente</button>
+                        <small class="form-text text-muted" style="display:block; margin-top:var(--spacing-xs);">Ao excluir sua conta, todos os seus dados e perfil serão removidos da plataforma.</small>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dashboard-meu-perfil-publico" class="dashboard-section" style="display:none;">
+                <div class="dashboard-section-header">
+                    <h1>Meu Perfil Público</h1>
+                    <p>Edite as informações que as marcas verão sobre você. Perfis completos atraem mais parcerias!</p>
+                </div>
+
+                <form id="formEditarPerfilPublico" action="#" method="POST" enctype="multipart/form-data">
+
+                    <div class="widget-card" style="margin-bottom: var(--spacing-lg);">
+                        <h3><i class="fas fa-image"></i> Imagens do Perfil</h3>
+                        
+                        <div class="profile-images-edit-container">
+                            <div class="form-group"> <label>Foto de Perfil (Recomendado: Quadrada, ex: 400x400px)</label>
+                                <div class="image-preview-container profile-avatar-preview">
+                                    <img src="https://images.pexels.com/photos/1642228/pexels-photo-1642228.jpeg" alt="Prévia da Foto de Perfil" id="previewFotoPerfil">
+                                </div>
+                                <div class="custom-file-upload">
+                                    <input type="file" id="fotoPerfilUpload" name="fotoPerfil" accept="image/png, image/jpeg, image/gif" class="inputfile">
+                                    <label for="fotoPerfilUpload" class="btn btn-outline btn-upload"><i class="fas fa-upload"></i> Escolher Arquivo</label>
+                                    <span class="file-name" id="fileNameFotoPerfil">Nenhum arquivo escolhido</span>
+                                </div>
+                                <small class="form-text text-muted" style="display: block; margin-top: var(--spacing-xs);">JPG, PNG, GIF. Máximo 2MB.</small>
+                            </div>
+
+                            <div class="form-group"> <label>Imagem de Capa (Recomendado: Panorâmica, ex: 1200x400px)</label>
+                                <div class="image-preview-container profile-cover-preview">
+                                    <img src="https://images.pexels.com/photos/1642228/pexels-photo-1642228.jpeg" alt="Prévia da Imagem de Capa" id="previewImagemCapa">
+                                </div>
+                                <div class="custom-file-upload">
+                                    <input type="file" id="imagemCapaUpload" name="imagemCapa" accept="image/png, image/jpeg, image/gif" class="inputfile">
+                                    <label for="imagemCapaUpload" class="btn btn-outline btn-upload"><i class="fas fa-upload"></i> Escolher Arquivo</label>
+                                    <span class="file-name" id="fileNameImagemCapa">Nenhum arquivo escolhido</span>
+                                </div>
+                                <small class="form-text text-muted" style="display: block; margin-top: var(--spacing-xs);">JPG, PNG, GIF. Máximo 5MB.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget-card" style="margin-bottom: var(--spacing-lg);">
+                        <h3><i class="fas fa-info-circle"></i> Informações Essenciais</h3>
+                        <div class="form-group">
+                            <label for="nomePublico">Nome Público / Artístico</label>
+                            <input type="text" class="form-control" id="nomePublico" name="nomePublico" value="" placeholder="Como você quer ser conhecido(a) pelas marcas" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tituloCurto">Título Curto / Chamada (Ex: "Especialista em Viagens de Luxo")</label>
+                            <input type="text" class="form-control" id="tituloCurto" name="tituloCurto" value="" placeholder="Uma frase curta que te define" maxlength="100">
+                        </div>
+                        <div class="form-group">
+                            <label for="bioPerfil">Sua BIO (Máx. 400 caracteres)</label>
+                            <textarea class="form-control" id="bioPerfil" name="bioPerfil" rows="5" maxlength="400" placeholder="Descreva seu estilo, suas paixões..." required></textarea>
+                            <small id="bioCharCount" class="form-text text-muted">400 caracteres restantes</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="localizacaoPerfil">Sua Localização Principal (Cidade, Estado)</label>
+                            <input type="text" class="form-control" id="localizacaoPerfil" name="localizacaoPerfil" value="" placeholder="Ex: Salvador, BA">
+                        </div>
+                    </div>
+
+                    <div class="widget-card" style="margin-bottom: var(--spacing-lg);">
+                        <h3><i class="fas fa-tags"></i> Nichos e Redes Sociais</h3>
+                        <div class="form-group">
+                            <label for="nichosAtuacao">Principais Nichos de Atuação (selecione até 3)</label>
+                            <input type="text" class="form-control" id="nichosAtuacao" name="nichosAtuacao" value="Moda, Lifestyle, Viagem" placeholder="Ex: Beleza, Games (separados por vírgula)">
+                            <small class="form-text text-muted">Adicione os principais temas do seu conteúdo.</small>
+                        </div>
+                        
+                        <div class="social-links-edit-container"> 
+                            <div class="form-group">
+                                <label for="linkInstagram">Instagram</label> <div class="input-group">
+                                    <span class="input-group-addon"><i class="fab fa-instagram"></i></span>
+                                    <input type="url" class="form-control" id="linkInstagram" name="linkInstagram" value="" placeholder="https://instagram.com/seuusuario">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="linkTikTok">TikTok</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fab fa-tiktok"></i></span>
+                                    <input type="url" class="form-control" id="linkTikTok" name="linkTikTok" value="" placeholder="https://tiktok.com/@seuusuario">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="linkYouTube">YouTube</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fab fa-youtube"></i></span>
+                                    <input type="url" class="form-control" id="linkYouTube" name="linkYouTube" value="" placeholder="https://youtube.com/channel/...">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="linkPortfolioExterno">Outro Link (Blog, Portfólio)</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fas fa-link"></i></span>
+                                    <input type="url" class="form-control" id="linkPortfolioExterno" name="linkPortfolioExterno" value="" placeholder="https://seusite.com">
+                                </div>
+                            </div>
+                        </div>
+                    
+                    <div style="text-align: right; margin-top: var(--spacing-xl);">
+                        <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-save"></i> Salvar Alterações</button>
+                    </div>
+                    <p style="text-align:center; margin-top:var(--spacing-md); font-size:0.9rem; color:var(--text-medium);"><i class="fas fa-lightbulb" style="color: var(--vibrant-lime-green);"></i> Dica: Um perfil completo e bem apresentado é o primeiro passo para grandes parcerias!</p>
+                </form>
+                </section>
+
+        </main>
+    </div>
+
+    <a href="#!" class="floating-cta" id="aiAssistantButton" style="background-color: var(--vibrant-purple-magenta); color: var(--text-on-vibrant-dark);">
+        <i class="fas fa-robot"></i>
+        <span>Precisa de ajuda? Fale comigo!</span>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // =======================================================
+            // Bloco 1: Dropdown do Menu do Usuário
+            // =======================================================
+            const userMenuToggle = document.getElementById('userMenuToggle');
+            const userDropdownMenu = document.getElementById('userDropdownMenu');
+
+            if (userMenuToggle && userDropdownMenu) {
+                userMenuToggle.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    userDropdownMenu.classList.toggle('show');
+                });
+                document.addEventListener('click', (event) => {
+                    if (!userMenuToggle.contains(event.target) && !userDropdownMenu.contains(event.target)) {
+                        userDropdownMenu.classList.remove('show');
+                    }
+                });
+            }
+
+            // =======================================================
+            // Bloco 2: Navegação por Seções do Dashboard
+            // =======================================================
+            const mainContentArea = document.querySelector('.dashboard-content');
+            // O seletor abaixo pode ser para '.dashboard-horizontal-nav' ou '.dashboard-sidebar' dependendo da página
+            const sectionNavLinks = document.querySelectorAll('.dashboard-horizontal-nav ul li a[data-section], .dashboard-sidebar nav ul li a[data-section]'); 
+            const ctaSectionLinks = document.querySelectorAll('[data-section-link]');
+            const dashboardSections = document.querySelectorAll('.dashboard-content > .dashboard-section');
+
+            function showSection(targetSectionId, isInitialLoad = false) {
+                // ... (seu código da função showSection continua o mesmo)
+                let sectionFound = false;
+                const defaultSectionId = dashboardSections[0] ? dashboardSections[0].id : '';
+
+                dashboardSections.forEach(section => {
+                    if (section.id === targetSectionId) {
+                        section.style.display = 'block';
+                        section.classList.add('active-dashboard-section');
+                        sectionFound = true;
+                    } else {
+                        section.style.display = 'none';
+                        section.classList.remove('active-dashboard-section');
+                    }
+                });
+                
+                if (!sectionFound && !isInitialLoad && defaultSectionId) {
+                    document.getElementById(defaultSectionId).style.display = 'block';
+                    document.getElementById(defaultSectionId).classList.add('active-dashboard-section');
+                    targetSectionId = defaultSectionId;
+                }
+                
+                sectionNavLinks.forEach(link => { 
+                    if (link.getAttribute('data-section') === targetSectionId) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+                
+                if (mainContentArea && !isInitialLoad) {
+                    mainContentArea.scrollTop = 0;
+                }
+
+                if (!isInitialLoad && history.pushState) {
+                     history.pushState({section: targetSectionId}, "", `#${targetSectionId}`);
+                }
+            }
+            
+            function setupEventListeners(links) {
+                // ... (seu código da função setupEventListeners continua o mesmo)
+                links.forEach(link => {
+                    if (link.getAttribute('href') !== 'index.html' && link.getAttribute('href') !== '#!') {
+                        link.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            const targetSectionId = this.getAttribute('data-section') || this.getAttribute('data-section-link');
+                            if(targetSectionId) {
+                                showSection(targetSectionId);
+                            }
+                        });
+                    }
+                });
+            }
+
+            setupEventListeners(sectionNavLinks);
+            setupEventListeners(ctaSectionLinks);
+            
+            // ... (seu código para carregar seção inicial e popstate continua o mesmo) ...
+
+
+            // =====================================================================
+            // Bloco 3: JS PARA ATUALIZAR NOME DO ARQUIVO - FOTO DE PERFIL
+            // =====================================================================
+            const fotoPerfilUploadInput = document.getElementById('fotoPerfilUpload');
+            const fileNameFotoPerfilSpan = document.getElementById('fileNameFotoPerfil');
+
+            if (fotoPerfilUploadInput && fileNameFotoPerfilSpan) {
+                fotoPerfilUploadInput.addEventListener('change', function(e) {
+                    const fileName = e.target.files[0] ? e.target.files[0].name : "Nenhum arquivo escolhido";
+                    fileNameFotoPerfilSpan.textContent = fileName;
+                });
+            }
+
+            // =====================================================================
+            // Bloco 4: JS PARA ATUALIZAR NOME DO ARQUIVO - IMAGEM DE CAPA
+            // =====================================================================
+            const imagemCapaUploadInput = document.getElementById('imagemCapaUpload');
+            const fileNameImagemCapaSpan = document.getElementById('fileNameImagemCapa');
+
+            if (imagemCapaUploadInput && fileNameImagemCapaSpan) {
+                imagemCapaUploadInput.addEventListener('change', function(e) {
+                    const fileName = e.target.files[0] ? e.target.files[0].name : "Nenhum arquivo escolhido";
+                    fileNameImagemCapaSpan.textContent = fileName;
+                });
+            }
+
+            // =====================================================================
+            // Bloco 5: JS PARA CONTADOR DE CARACTERES DA BIO
+            // =====================================================================
+            const bioTextarea = document.getElementById('bioPerfil');
+            const bioCharCountSpan = document.getElementById('bioCharCount');
+            const bioMaxLength = 400;
+
+            if (bioTextarea && bioCharCountSpan) {
+                bioTextarea.addEventListener('input', function() {
+                    const caracteresRestantes = bioMaxLength - this.value.length;
+                    bioCharCountSpan.textContent = caracteresRestantes + ' caracteres restantes';
+                });
+                const caracteresIniciaisRestantes = bioMaxLength - bioTextarea.value.length;
+                bioCharCountSpan.textContent = caracteresIniciaisRestantes + ' caracteres restantes';
+            }
+
+            // =====================================================================
+            // Bloco 6: JS PARA PRÉ-VISUALIZAÇÃO DE IMAGENS
+            // =====================================================================
+            function setupImagePreview(inputId, previewImgId) {
+                const inputElement = document.getElementById(inputId);
+                const previewElement = document.getElementById(previewImgId);
+
+                if (inputElement && previewElement) {
+                    inputElement.addEventListener('change', function(event) {
+                        const file = event.target.files[0];
+                        if (file) {
+                            const reader = new FileReader();
+                            reader.onload = function(e) {
+                                previewElement.src = e.target.result;
+                            }
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                }
+            }
+
+            setupImagePreview('fotoPerfilUpload', 'previewFotoPerfil');
+            setupImagePreview('imagemCapaUpload', 'previewImagemCapa');
+
+
+            // =====================================================================
+            // Bloco 7: LÓGICA COMPLETA PARA O MODAL DE PORTFÓLIO (AGORA DENTRO DO DOMContentLoaded)
+            // =====================================================================
+            console.log("Inicializando script do modal de portfólio...");
+    
+            const portfolioModal = document.getElementById('modalAdicionarEditarPortfolio');
+            const openPortfolioModalBtn = document.getElementById('btnAdicionarPortfolioItem');
+            const closePortfolioModalBtns = document.querySelectorAll('.close-modal-btn'); 
+    
+            if (portfolioModal) {
+    
+                const openModal = () => {
+                    portfolioModal.classList.add('is-active');
+                    console.log("Modal aberto com sucesso.");
+                };
+    
+                const closeModal = () => {
+                    portfolioModal.classList.remove('is-active');
+                    console.log("Comando para fechar o modal foi executado.");
+                };
+    
+                if (openPortfolioModalBtn) {
+                    openPortfolioModalBtn.addEventListener('click', openModal);
+                } else {
+                    console.error("ERRO: Botão para abrir o modal (id='btnAdicionarPortfolioItem') não foi encontrado.");
+                }
+                
+                if (closePortfolioModalBtns.length > 0) {
+                    console.log(closePortfolioModalBtns.length + " botão(ões) de fechar encontrados.");
+                    closePortfolioModalBtns.forEach(btn => {
+                        btn.addEventListener('click', closeModal);
+                    });
+                } else {
+                    console.warn("AVISO: Nenhum botão de fechar com a classe '.close-modal-btn' foi encontrado no HTML.");
+                }
+    
+                portfolioModal.addEventListener('click', (event) => {
+                    if (event.target === portfolioModal) {
+                        closeModal();
+                    }
+                });
+    
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && portfolioModal.classList.contains('is-active')) {
+                        closeModal();
+                    }
+                });
+    
+            } else {
+                // Não é um erro crítico se o modal não existir em todas as páginas, então podemos usar um log mais suave
+                console.info("INFO: O elemento do modal (id='modalAdicionarEditarPortfolio') não está presente nesta página.");
+            }
+
+        }); // FIM DO DOMContentLoaded
+    </script>
+</body>
+</html>
